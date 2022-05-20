@@ -6,13 +6,13 @@
 .loader {
     width: 100%;
     height: 100vh;
-    background-image: url('../UI/主視覺/電腦-主視覺.jpg');
+    background-image: url('../img/電腦-主視覺.jpg');
     background-size: cover;
 
     .cloud {
         width: 100%;
         height: 100%;
-        background-image: url('../UI/琉球線搭乘資訊.jpg');
+        background-image: url('../img/背景.jpg');
         animation: loading_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
         animation-fill-mode: forwards;
         animation-delay: 1.5s;
@@ -32,29 +32,37 @@
         .index_menu4 {
             width: 180px;
             height: 430px;
-            // background-color: aquamarine;
             transition: 0.8s;
             animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
             animation-fill-mode: forwards;
         }
 
         .index_menu1 {
-            background-image: url('../UI/主視覺/小4/交通.jpg');
+            background-image: url('../img/小4/交通.jpg');
             background-size: cover;
+            position: relative;
+
+            .menu_title1 {
+                position: absolute;
+                bottom: 0%;
+                width: 100%;
+                height: 30px;
+                color: white;
+            }
         }
 
         .index_menu2 {
-            background-image: url('../UI/主視覺/小4/天臺冰店2.jpg');
+            background-image: url('../img/小4/天臺冰店2.jpg');
             background-size: cover;
         }
 
         .index_menu3 {
-            background-image: url('../UI/主視覺/小4/住宿.jpg');
+            background-image: url('../img/小4/住宿.jpg');
             background-size: cover;
         }
 
         .index_menu4 {
-            background-image: url('../UI/主視覺/小4/景點-主視覺.jpg');
+            background-image: url('../img/小4/景點-主視覺.jpg');
             background-size: cover;
         }
 
