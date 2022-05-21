@@ -62,6 +62,10 @@ nav .container .nav ul li .icon i {
   font-size: 18px;
 }
 
+nav .container .nav ul li a {
+  letter-spacing: .5px;
+}
+
 nav .container .nav ul li .theme {
   font-size: 12px;
   text-align: center;
