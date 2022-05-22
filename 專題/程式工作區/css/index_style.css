@@ -39,10 +39,10 @@ p {
           column-gap: 30px;
 }
 
-.loader .menu .index_menu1,
-.loader .menu .index_menu2,
-.loader .menu .index_menu3,
-.loader .menu .index_menu4 {
+.loader .menu a .index_menu1,
+.loader .menu a .index_menu2,
+.loader .menu a .index_menu3,
+.loader .menu a .index_menu4 {
   width: 230px;
   height: 550px;
   -webkit-transition: 0.8s;
@@ -53,22 +53,22 @@ p {
           animation-fill-mode: forwards;
 }
 
-.loader .menu .index_menu1 .menu_title1,
-.loader .menu .index_menu1 .menu_title2,
-.loader .menu .index_menu1 .menu_title3,
-.loader .menu .index_menu1 .menu_title4,
-.loader .menu .index_menu2 .menu_title1,
-.loader .menu .index_menu2 .menu_title2,
-.loader .menu .index_menu2 .menu_title3,
-.loader .menu .index_menu2 .menu_title4,
-.loader .menu .index_menu3 .menu_title1,
-.loader .menu .index_menu3 .menu_title2,
-.loader .menu .index_menu3 .menu_title3,
-.loader .menu .index_menu3 .menu_title4,
-.loader .menu .index_menu4 .menu_title1,
-.loader .menu .index_menu4 .menu_title2,
-.loader .menu .index_menu4 .menu_title3,
-.loader .menu .index_menu4 .menu_title4 {
+.loader .menu a .index_menu1 .menu_title1,
+.loader .menu a .index_menu1 .menu_title2,
+.loader .menu a .index_menu1 .menu_title3,
+.loader .menu a .index_menu1 .menu_title4,
+.loader .menu a .index_menu2 .menu_title1,
+.loader .menu a .index_menu2 .menu_title2,
+.loader .menu a .index_menu2 .menu_title3,
+.loader .menu a .index_menu2 .menu_title4,
+.loader .menu a .index_menu3 .menu_title1,
+.loader .menu a .index_menu3 .menu_title2,
+.loader .menu a .index_menu3 .menu_title3,
+.loader .menu a .index_menu3 .menu_title4,
+.loader .menu a .index_menu4 .menu_title1,
+.loader .menu a .index_menu4 .menu_title2,
+.loader .menu a .index_menu4 .menu_title3,
+.loader .menu a .index_menu4 .menu_title4 {
   width: 100%;
   height: 100px;
   background-color: #69B1C2;
@@ -83,7 +83,14 @@ p {
   line-height: 1.5em;
 }
 
-.loader .menu .index_menu1 {
+.loader .menu a .index_menu1 .menu_title3,
+.loader .menu a .index_menu2 .menu_title3,
+.loader .menu a .index_menu3 .menu_title3,
+.loader .menu a .index_menu4 .menu_title3 {
+  width: 92%;
+}
+
+.loader .menu a .index_menu1 {
   background-image: url("../img/index/4cards/transportation.jpg");
   background-size: cover;
   position: absolute;
@@ -91,7 +98,7 @@ p {
   top: -5%;
 }
 
-.loader .menu .index_menu2 {
+.loader .menu a .index_menu2 {
   background-image: url("../img/index/4cards/food.jpg");
   background-size: cover;
   background-position: 40% 0%;
@@ -100,7 +107,7 @@ p {
   top: 5%;
 }
 
-.loader .menu .index_menu3 {
+.loader .menu a .index_menu3 {
   background-image: url("../img/index/4cards/accommodation.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -109,7 +116,7 @@ p {
   top: -5%;
 }
 
-.loader .menu .index_menu4 {
+.loader .menu a .index_menu4 {
   background-image: url("../img/index/4cards/attractions.jpg");
   background-size: cover;
   position: absolute;
@@ -117,7 +124,7 @@ p {
   top: 5%;
 }
 
-.loader .menu .open {
+.loader .menu a .open {
   width: 400px;
   z-index: 3;
 }
