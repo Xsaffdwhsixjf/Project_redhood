@@ -1,4 +1,5 @@
-* {
+*,
+p {
     margin: 0;
     padding: 0;
 }
@@ -6,23 +7,26 @@
 .loader {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/');
+    background-image: url('../img/index/background.jpg');
     background-size: cover;
 
     .cloud {
         width: 100%;
         height: 100%;
-        background-image: url('../img/背景.jpg');
+        background-image: url('../img/index/animation_background.jpg');
+        background-size: cover;
         animation: loading_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
         animation-fill-mode: forwards;
         animation-delay: 1.5s;
     }
 
     .menu {
+        width: 1090px;
+        height: 600px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-46%, -42%);
         display: flex;
         column-gap: 30px;
 
@@ -30,64 +34,73 @@
         .index_menu2,
         .index_menu3,
         .index_menu4 {
-            width: 250px;
-            height: 650px;
+            width: 230px;
+            height: 550px;
             transition: 0.8s;
             animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
             animation-fill-mode: forwards;
-        }
 
-        .index_menu1 {
-            background-image: url('../img/小4/交通.jpg');
-            background-size: cover;
-            position: relative;
-
-            .menu_title1 {
-                position: absolute;
-                bottom: 0%;
+            .menu_title1,
+            .menu_title2,
+            .menu_title3,
+            .menu_title4 {
                 width: 100%;
-                height: 30px;
+                height: 100px;
+                background-color: #69B1C2;
+                position: absolute;
+                top: 100%;
+                transform: translateY(-100%);
                 color: white;
+                opacity: .7;
+                text-align: center;
+                letter-spacing: .3em;
+                line-height: 1.5em;
             }
         }
 
-        .index_menu2 {
-            background-image: url('../img/小4/天臺冰店2.jpg');
+        .index_menu1 {
+            background-image: url('../img/index/4cards/transportation.jpg');
             background-size: cover;
+            position: absolute;
+            left: 5%;
+            top: -5%;
+
+
+        }
+
+        .index_menu2 {
+            background-image: url('../img/index/4cards/food.jpg');
+            background-size: cover;
+            background-position: 40% 0%;
+            position: absolute;
+            left: 30%;
+            top: 5%;
+
         }
 
         .index_menu3 {
-            background-image: url('../img/小4/住宿.jpg');
-            background-size: cover;
+            background-image: url('../img/index/4cards/accommodation.jpg');
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 55%;
+            top: -5%;
         }
 
         .index_menu4 {
-            background-image: url('../img/小4/景點-主視覺.jpg');
+            background-image: url('../img/index/4cards/attractions.jpg');
             background-size: cover;
+            position: absolute;
+            left: 80%;
+            top: 5%;
         }
 
         .open {
             width: 400px;
+            z-index: 3;
         }
-
     }
 
-    .logo {
-        width: 100px;
-        height: 100px;
-        border: 1px solid #000;
-        position: absolute;
-        top: 0%;
-        left: 90%;
-        transform: translate(-100%, 0%);
-        animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
-        animation-fill-mode: forwards;
-        // a {
-        //     img {
-
-        //     }
-        // }
-    }
 
     .index_title {
         width: 141px;
@@ -98,6 +111,8 @@
         transform: translate(0, -50%);
         animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
         animation-fill-mode: forwards;
+        letter-spacing: .3em;
+        line-height: 1.5em;
     }
 }
 
