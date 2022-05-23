@@ -1,0 +1,35 @@
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 85vh;
+  background-image: url("../img/attractions/background.jpg");
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+section .map {
+  width: 40%;
+  border: 1px solid #000;
+  position: relative;
+}
+
+section .map iframe {
+  position: absolute;
+  top: 50%;
+}
+
+section .pic {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .pic img {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+}
+/*# sourceMappingURL=attractions.css.map */

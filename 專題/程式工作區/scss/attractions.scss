@@ -1,0 +1,27 @@
+section {
+    display: flex;
+    height: 85vh;
+    background-image: url('../img/attractions/background.jpg');
+align-content: center;
+
+    .map {
+        width: 40%;
+        border: 1px solid #000;
+        position: relative;
+        iframe{
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    .pic {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            width: calc(100% / 3);
+            height: calc(100% / 3);
+        }
+    }
+}

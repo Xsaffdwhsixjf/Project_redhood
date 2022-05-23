@@ -1,0 +1,75 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: url();
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+nav .container #navLogo {
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+nav .container .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .container .nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+nav .container .nav ul li .icon {
+  margin: 10px;
+  opacity: 0.9;
+}
+
+nav .container .nav ul li .icon i {
+  font-size: 18px;
+}
+
+nav .container .nav ul li a {
+  letter-spacing: .5px;
+}
+
+nav .container .nav ul li .theme {
+  font-size: 12px;
+  text-align: center;
+  color: #02171C;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=nav.css.map */
