@@ -1,0 +1,145 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: url(../img/transp/水路交通背景.jpg) no-repeat;
+  background-size: cover;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+nav .container #navLogo {
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+nav .container .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .container .nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+nav .container .nav ul li .icon {
+  margin: 10px;
+  opacity: 0.9;
+}
+
+nav .container .nav ul li .icon i {
+  font-size: 18px;
+}
+
+nav .container .nav ul li a {
+  letter-spacing: .5px;
+}
+
+nav .container .nav ul li .theme {
+  font-size: 12px;
+  text-align: center;
+  color: #02171C;
+  opacity: 0.9;
+}
+
+section {
+  width: 850px;
+  height: 80px;
+  margin: 20px 5%;
+  background-color: #268197;
+  border-radius: 30px;
+  opacity: 0.7;
+}
+
+section .titleBox {
+  font-size: 22px;
+  color: white;
+  font-weight: 300em;
+  line-height: 80px;
+  margin: auto;
+  text-align: justify;
+  letter-spacing: 3px;
+  padding-left: 30px;
+  opacity: 0.9;
+}
+
+#info {
+  width: 1500px;
+  padding: 10px 7%;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+#info p {
+  padding: 20px;
+  white-space: pre-line;
+}
+
+#info table {
+  padding: 20px;
+}
+
+#info th,
+#info td {
+  padding: 20px;
+  margin: 10px;
+  background-color: #96D4D4;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+#info dt {
+  line-height: 55px;
+  white-space: pre-line;
+}
+
+#info dt dd {
+  line-height: 30px;
+  white-space: pre-line;
+}
+
+#info img {
+  width: 700px;
+  background-color: #96D4D4;
+}
+
+#info iframe {
+  margin: 50px;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=transp.css.map */
