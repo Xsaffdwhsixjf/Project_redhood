@@ -30,15 +30,16 @@ nav .container {
           justify-content: space-between;
   position: relative;
   max-width: calc(1600px + 10%);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 5%;
+  width: 90%;
+  padding: 0;
+  margin: 10px 10%;
 }
 
-nav .container #navLogo {
+nav .container .navLogo {
   position: absolute;
   top: 40px;
-  width: 80px;
+  left: 20px;
+  width: 160px;
   opacity: 0.7;
 }
 
@@ -46,6 +47,7 @@ nav .container .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px;
 }
 
 nav .container .nav ul li {
@@ -53,10 +55,11 @@ nav .container .nav ul li {
   display: -ms-flexbox;
   display: flex;
   margin: 15px;
+  margin-right: 5px;
 }
 
 nav .container .nav ul li .icon {
-  margin: 10px;
+  margin: 15px;
   opacity: 0.9;
 }
 
@@ -66,34 +69,35 @@ nav .container .nav ul li .icon i {
 
 nav .container .nav ul li a {
   letter-spacing: .5px;
+  font-size: 18px;
 }
 
 nav .container .nav ul li .theme {
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
   color: #02171C;
   opacity: 0.9;
 }
 
 section {
-  max-width: 100%;
-  width: 850px;
   height: 80px;
   margin: 20px 5%;
-  background-color: #268197;
-  border-radius: 30px;
-  opacity: 0.7;
+  border: 2px;
 }
 
 section .titleBox {
-  font-size: 22px;
+  width: calc(100vw - 5%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(11%, #77a5b0), color-stop(53%, #d8eef4), to(rgba(191, 244, 255, 0)));
+  background: linear-gradient(90deg, #77a5b0 11%, #d8eef4 53%, rgba(191, 244, 255, 0) 100%);
+  border-radius: 30px;
+  opacity: 0.7;
+  font-size: 36px;
   color: white;
-  font-weight: 300em;
+  font-weight: 400em;
   line-height: 80px;
-  margin: auto;
   text-align: justify;
-  letter-spacing: 3px;
-  padding-left: 30px;
+  letter-spacing: 5px;
+  padding-left: 50px;
   opacity: 0.9;
 }
 
@@ -103,10 +107,15 @@ section .titleBox {
   padding: 10px 7%;
   font-size: 18px;
   letter-spacing: 1.5px;
+  overflow: hidden;
+}
+
+#info h2 {
+  margin: 10px;
 }
 
 #info p {
-  padding: 20px;
+  padding-left: 20px;
   white-space: pre-line;
 }
 
@@ -136,8 +145,10 @@ section .titleBox {
 }
 
 #info img {
-  width: 700px;
-  background-color: #96D4D4;
+  max-width: 100%;
+  width: 1200px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 #info iframe {
@@ -148,8 +159,12 @@ section .titleBox {
 @media screen and (max-width: 866px) {
   section {
     line-height: 50px;
+    max-width: 80%;
   }
-  section iframe {
+  section .midBox {
+    display: none;
+  }
+  .oilstop {
     width: 100%;
     padding: 50px;
     border-radius: 50px;

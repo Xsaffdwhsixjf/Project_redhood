@@ -26,27 +26,32 @@ nav {
         justify-content: space-between;
         position: relative;
         max-width: calc(1600px + 10%);
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 5%;
+        width: 90%;
+        padding:0;
+        margin:10px 10%;
 
-        #navLogo {
+            .navLogo {
             position: absolute;
             top: 40px;
-            width: 80px;
+            left:20px;
+            width: 160px;
             opacity: 0.7;
         }
 
         .nav {
             ul {
                 display: flex;
+                padding:5px;
+                
+            
 
                 li {
                     display: flex;
                     margin: 15px;
+                    margin-right: 5px;
 
                     .icon {
-                        margin: 10px;
+                        margin: 15px;
 
                         i {
                             font-size: 18px;
@@ -57,10 +62,11 @@ nav {
 
                     a {
                         letter-spacing: .5px;
+                        font-size: 18px;
                     }
 
                     .theme {
-                        font-size: 12px;
+                        font-size: 18px;
                         text-align: center;
                         color: #02171C;
                         opacity: 0.9;
@@ -72,23 +78,24 @@ nav {
 }
 
 section {
-    max-width: 100%;
-    width: 850px;
+
     height: 80px;
     margin: 20px 5%;
-    background-color: #268197;
-    border-radius: 30px;
-    opacity: 0.7;
+    border: 2px;
+
 
     .titleBox {
-        font-size: 22px;
+        width: calc(100vw - 5%);
+        background: linear-gradient(90deg, rgba(119,165,176,1) 11%, rgba(216,238,244,1) 53%, rgba(191,244,255,0) 100%);
+        border-radius: 30px;
+        opacity: 0.7;
+        font-size: 36px;
         color: white;
-        font-weight: 300em;
+        font-weight: 400em;
         line-height: 80px;
-        margin: auto;
         text-align: justify;
-        letter-spacing: 3px;
-        padding-left: 30px;
+        letter-spacing: 5px;
+        padding-left: 50px;
         opacity: 0.9;
     }
 }
@@ -99,10 +106,15 @@ section {
     padding: 10px 7%;
     font-size: 18px;
     letter-spacing: 1.5px;
+    overflow: hidden;
+
+    h2 {
+        margin: 10px;
+    }
 
 
     p {
-        padding: 20px;
+        padding-left: 20px;
         white-space: pre-line;
     }
 
@@ -132,27 +144,37 @@ section {
     }
 
     img {
-        width: 700px;
-        background-color: #96D4D4;
+        max-width: 100%;
+        width: 1200px;
+        transform: rotate(20deg);
+
     }
 
     iframe {
         margin: 50px;
         border-radius: 20px;
     }
-}
-@media screen and (max-width: 866px){
 
-    section{
-        line-height:50px;
-        
-    
-    iframe{
+}
+
+
+@media screen and (max-width: 866px) {
+
+    section {
+        line-height: 50px;
+        max-width: 80%;
+
+        .midBox {
+            display: none;
+        }
+    }
+
+    .oilstop {
         width: 100%;
-        padding:50px;
+        padding: 50px;
         border-radius: 50px;
     }
 
 
-}
+
 }

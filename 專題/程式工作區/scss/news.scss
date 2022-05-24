@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+
+    background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+
+/* Configuration Parameters */
+$lineWidth: 5px;
+$lineLength: 25px;
+$baseMargin: 8px;
+$animationDuration: .2s;
+
+html {
+    background: #CCC;
+    font-family: Roboto Slab, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+#hamburger {
+    display: none;
+}
+
+.news-bg {
+    display: block;
+    background-color: #AAA;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    -webkit-transition-duration: $animationDuration;
+    -moz-transition-duration: $animationDuration;
+    -ms-transition-duration: $animationDuration;
+    -o-transition-duration: $animationDuration;
+    transition-duration: $animationDuration;
+    -webkit-transition-delay: $animationDuration;
+    -moz-transition-delay: $animationDuration;
+    -ms-transition-delay: $animationDuration;
+    -o-transition-delay: $animationDuration;
+    transition-delay: $animationDuration;
+
+    ul {
+        padding-left: 10px;
+
+        li {
+            font-size: 24pt;
+            padding: 10px 0;
+
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: grey;
+                }
+            }
+        }
+    }
+}
+
+.menuicon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    cursor: pointer;
+    height: $baseMargin*2 + $lineWidth;
+    width: $lineLength;
+
+    span {
+        display: block;
+        top: $baseMargin;
+        width: $lineLength;
+        height: $lineWidth;
+        background-color: #000;
+        position: relative;
+        -webkit-transition-duration: 0;
+        -moz-transition-duration: 0;
+        -ms-transition-duration: 0;
+        -o-transition-duration: 0;
+        transition-duration: 0;
+        -webkit-transition-delay: $animationDuration;
+        -moz-transition-delay: $animationDuration;
+        -ms-transition-delay: $animationDuration;
+        -o-transition-delay: $animationDuration;
+        transition-delay: $animationDuration;
+
+        &::after,
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            width: $lineLength;
+            height: $lineWidth;
+            background-color: #000;
+            -webkit-transition-property: margin, -webkit-transform;
+            -webkit-transition-duration: $animationDuration;
+            -moz-transition-duration: $animationDuration;
+            -ms-transition-duration: $animationDuration;
+            -o-transition-duration: $animationDuration;
+            transition-duration: $animationDuration;
+            -webkit-transition-delay: $animationDuration, 0;
+            -moz-transition-delay: $animationDuration, 0;
+            -ms-transition-delay: $animationDuration, 0;
+            -o-transition-delay: $animationDuration, 0;
+            transition-delay: $animationDuration, 0;
+        }
+
+        &::before {
+            margin-top: -$baseMargin;
+        }
+
+        &::after {
+            margin-top: $baseMargin;
+        }
+    }
+}
+
+#hamburger:checked~.news-bg {
+    width: 40%;
+}
+
+#hamburger:checked~.menuicon {
+    span {
+        background-color: rgba(0, 0, 0, 0);
+
+        &::before,
+        &::after {
+            margin-top: 0px;
+            -webkit-transition-delay: 0, $animationDuration;
+            -moz-transition-delay: 0, $animationDuration;
+            -ms-transition-delay: 0, $animationDuration;
+            -o-transition-delay: 0, $animationDuration;
+            transition-delay: 0, $animationDuration;
+        }
+
+        &::before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+}
