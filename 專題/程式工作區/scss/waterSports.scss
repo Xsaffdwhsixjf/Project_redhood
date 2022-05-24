@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans TC', sans-serif;
-    background-image: url(../水上玩樂背景.jpg);
+    background-image: url(../img/watersport/水上玩樂背景.jpg);
 }
 
 
@@ -38,18 +38,19 @@ nav {
         }
 
         .navlist {
-            
-            label{
-                
-                img{
+
+            label {
+
+                img {
                     width: 50px;
                     display: flex;
                 }
-             
+
             }
-         
+
             .dropdown {
                 display: none;
+
                 ul {
                     li {
                         display: flex;
@@ -72,7 +73,8 @@ nav {
                             opacity: 0.9;
                         }
                     }
-                    &:show{
+
+                    &:show {
                         display: flex;
                     }
                 }
@@ -80,9 +82,11 @@ nav {
         }
     }
 }
-.show{
-    display: flex ;
+
+.show {
+    display: flex;
 }
+
 // 水上遊玩
 #watersports {
     font-size: 30px;
@@ -105,8 +109,9 @@ nav {
     justify-items: center;
     align-items: center;
     overflow: hidden;
-}    
-    .square {
+}
+
+.square {
     z-index: 1;
     grid-column: span 2;
     max-width: 100%;
@@ -114,52 +119,54 @@ nav {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: scale(1);
     transition: all .25s;
-    
-        &:nth-child(7n + 1) {
+
+    &:nth-child(7n + 1) {
         grid-column: 2 / span 2;
-        }
-    
-        &:hover {
+    }
+
+    &:hover {
         z-index: 2;
         transform: scale(1.5);
-        }
     }
+}
 
 
 
 @media screen and (max-width: 866px) {
 
-        .navlist{
+    .navlist {
 
-          
-                #menubar:checked ~ .dropddown{
-                    display: flex;
+
+        #menubar:checked~.dropddown {
+            display: flex;
+        }
     }
-    }
+
     .wrapper {
         position: relative;
         flex-grow: 1;
         margin-top: 150px;
         max-width: 100wh;
         // max-height: 100;
-    
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 2vmin;
         justify-items: center;
         align-items: center;
-                .square {
+
+        .square {
             z-index: 1;
-            clip-path:none;
+            clip-path: none;
             grid-column: span 1;
             grid-row: span 1;
             max-width: 80%;
             margin: 10px;
-            
+
             transform: scale(1);
             transition: all .5s;
-            
+
         }
     }
 

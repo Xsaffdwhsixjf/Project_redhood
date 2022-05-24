@@ -72,6 +72,7 @@ nav {
 }
 
 section {
+    max-width: 100%;
     width: 850px;
     height: 80px;
     margin: 20px 5%;
@@ -93,6 +94,7 @@ section {
 }
 
 #info {
+    max-width: 100%;
     width: 1500px;
     padding: 10px 7%;
     font-size: 18px;
@@ -138,9 +140,19 @@ section {
         margin: 50px;
         border-radius: 20px;
     }
+}
+@media screen and (max-width: 866px){
+
+    section{
+        line-height:50px;
+        
+    
+    iframe{
+        width: 100%;
+        padding:50px;
+        border-radius: 50px;
+    }
 
 
-
-
-
+}
 }
