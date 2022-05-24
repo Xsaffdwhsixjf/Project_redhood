@@ -16,7 +16,7 @@ body {
 $lineWidth: 5px;
 $lineLength: 25px;
 $baseMargin: 8px;
-$animationDuration: .2s;
+$animationDuration: .3s;
 
 html {
     background: #CCC;
@@ -36,7 +36,8 @@ body {
 
 .news-bg {
     display: block;
-    background-color: #AAA;
+    background-color: #69B1C2;
+    opacity: 0.8;
     width: 0px;
     height: 100%;
     overflow: hidden;
@@ -81,7 +82,7 @@ body {
     height: $baseMargin*2 + $lineWidth;
     width: $lineLength;
 
-    span {
+    .span {
         display: block;
         top: $baseMargin;
         width: $lineLength;

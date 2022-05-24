@@ -30,15 +30,16 @@ body {
 
 .news-bg {
   display: block;
-  background-color: #AAA;
+  background-color: #69B1C2;
+  opacity: 0.8;
   width: 0px;
   height: 100%;
   overflow: hidden;
   padding-top: 50px;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .news-bg ul {
@@ -70,7 +71,7 @@ body {
   width: 25px;
 }
 
-.menuicon span {
+.menuicon .span {
   display: block;
   top: 8px;
   width: 25px;
@@ -79,11 +80,11 @@ body {
   position: relative;
   -webkit-transition-duration: 0;
   transition-duration: 0;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
-.menuicon span::after, .menuicon span::before {
+.menuicon .span::after, .menuicon .span::before {
   display: block;
   content: '';
   position: absolute;
@@ -91,17 +92,17 @@ body {
   height: 5px;
   background-color: #000;
   -webkit-transition-property: margin, -webkit-transform;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-delay: 0.2s, 0;
-  transition-delay: 0.2s, 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s, 0;
+  transition-delay: 0.3s, 0;
 }
 
-.menuicon span::before {
+.menuicon .span::before {
   margin-top: -8px;
 }
 
-.menuicon span::after {
+.menuicon .span::after {
   margin-top: 8px;
 }
 
@@ -115,8 +116,8 @@ body {
 
 #hamburger:checked ~ .menuicon span::before, #hamburger:checked ~ .menuicon span::after {
   margin-top: 0px;
-  -webkit-transition-delay: 0, 0.2s;
-  transition-delay: 0, 0.2s;
+  -webkit-transition-delay: 0, 0.3s;
+  transition-delay: 0, 0.3s;
 }
 
 #hamburger:checked ~ .menuicon span::before {
