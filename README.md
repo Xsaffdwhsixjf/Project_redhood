@@ -6,3 +6,5 @@ https://docs.google.com/spreadsheets/d/1rr1D53ptCkJbE3zf7T4kN0xmtsyBgrhN/edit?us
 https://docs.google.com/document/d/1-VF5OVs3DV7r1O7Uwb3oGykvRqhnA3Ms/edit?usp=sharing&ouid=113951595351244196950&rtpof=true&sd=true <br>
 特色小店文案：<br>
 https://docs.google.com/document/d/1BP3IiqI4uNuuXAMxMvB8KM23DufKKhEzXvW4uHFAbXA/edit?usp=sharing
+特色小食文案：<br>
+https://docs.google.com/document/d/1nSVc3mElWYav2UTHvnCudDal3AhhKJ9d7qLnToz59ug/edit?usp=sharing
