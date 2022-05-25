@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: url(../img/watersport/水上玩樂背景.jpg);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100wh;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+nav .container #navLogo {
+  position: absolute;
+  top: 30px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+nav .container .navlist label img {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .container .navlist .dropdown {
+  display: none;
+}
+
+nav .container .navlist .dropdown ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+nav .container .navlist .dropdown ul li .icon {
+  margin: 10px;
+  opacity: 0.9;
+}
+
+nav .container .navlist .dropdown ul li .icon i {
+  font-size: 18px;
+}
+
+nav .container .navlist .dropdown ul li .theme {
+  font-size: 12px;
+  text-align: center;
+  color: #02171C;
+  opacity: 0.9;
+}
+
+nav .container .navlist .dropdown ul:show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#watersports {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+}
+
+.wrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: auto;
+  max-width: 100wh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.square {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.square:nth-child(7n + 1) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+.square:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@media screen and (max-width: 866px) {
+  .navlist #menubar:checked ~ .dropddown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrapper {
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-top: 150px;
+    max-width: 100wh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2vmin;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .square {
+    z-index: 1;
+    -webkit-clip-path: none;
+            clip-path: none;
+    grid-column: span 1;
+    grid-row: span 1;
+    max-width: 80%;
+    margin: 10px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+}
+/*# sourceMappingURL=waterSports.css.map */
