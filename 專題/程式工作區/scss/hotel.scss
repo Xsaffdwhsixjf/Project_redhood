@@ -1,71 +1,73 @@
-* {
-    box-sizing: border-box;
-}
+    section {
+        padding: 0px 50px;
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans TC', sans-serif;
-    background-image: url();
-}
-
-ul,
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-nav {
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        max-width: calc(1600px + 10%);
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 5%;
-
-        #navLogo {
-            position: absolute;
-            top: 40px;
-            width: 80px;
-            opacity: 0.7;
+        h1 {
+            font-size: 1.8em;
         }
 
-        .nav {
-            ul {
-                display: flex;
+        #table_id_wrapper {
 
-                li {
-                    display: flex;
-                    margin: 15px;
+            #table_id {
+                height: 80%;
 
-                    .icon {
-                        margin: 10px;
+                thead {
+                    display: none;
+                }
 
-                        i {
-                            font-size: 18px;
+                tbody {
+                    background-color: transparent;
+                    height: 80%;
+
+                    tr {
+                        display: block;
+                        height: 80%;
+
+                        td {
+                            width: 30%;
+                            height: calc(65vh/3);
+                            background-color: transparent;
+                            padding: 15px;
+
+                            .info_card {
+                                height: calc(59vh / 3);
+                                width: 100%;
+                                display: flex;
+                                margin-bottom: 10px;
+                                background-color: transparent;
+                                border-radius: 25px;
+
+                                .img {
+                                    width: 40%;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 25px;
+                                    }
+                                }
+
+                                .content {
+                                    width: 60%;
+                                    height: 100%;
+                                    margin-left: 30px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    row-gap: 7px;
+
+                                    h1,
+                                    p,
+                                    a {
+                                        text-decoration: unset;
+                                        color: black;
+                                        letter-spacing: .25em;
+                                    }
+                                }
+                            }
+
                         }
-
-                        opacity: 0.9;
-                    }
-
-                    a {
-                        letter-spacing: .5px;
-                    }
-
-                    .theme {
-                        font-size: 12px;
-                        text-align: center;
-                        color: #02171C;
-                        opacity: 0.9;
                     }
                 }
             }
         }
     }
-}

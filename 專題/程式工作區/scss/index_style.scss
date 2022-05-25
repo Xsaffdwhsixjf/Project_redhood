@@ -30,84 +30,76 @@ p {
         display: flex;
         column-gap: 30px;
 
-        a {
+        .index_menu1,
+        .index_menu2,
+        .index_menu3,
+        .index_menu4 {
+            width: 230px;
+            height: 550px;
+            transition: 0.8s;
+            animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
+            animation-fill-mode: forwards;
 
-            .index_menu1,
-            .index_menu2,
-            .index_menu3,
-            .index_menu4 {
-                width: 230px;
-                height: 550px;
-                transition: 0.8s;
-                animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
-                animation-fill-mode: forwards;
-
-                .menu_title1,
-                .menu_title2,
-                .menu_title3,
-                .menu_title4 {
-                    width: 100%;
-                    height: 100px;
-                    background-color: #69B1C2;
-                    position: absolute;
-                    top: 100%;
-                    transform: translateY(-100%);
-                    color: white;
-                    opacity: .7;
-                    text-align: center;
-                    letter-spacing: .3em;
-                    line-height: 1.5em;
-                }
-                .menu_title3{
-                    width: 92%;
-                }
-            }
-
-            .index_menu1 {
-                background-image: url('../img/index/4cards/transportation.jpg');
-                background-size: cover;
+            .menu_title1,
+            .menu_title2,
+            .menu_title3,
+            .menu_title4 {
+                width: 100%;
+                height: 100px;
+                background-color: #69B1C2;
                 position: absolute;
-                left: 5%;
-                top: -5%;
-
-
-            }
-
-            .index_menu2 {
-                background-image: url('../img/index/4cards/food.jpg');
-                background-size: cover;
-                background-position: 40% 0%;
-                position: absolute;
-                left: 30%;
-                top: 5%;
-
-            }
-
-            .index_menu3 {
-                background-image: url('../img/index/4cards/accommodation.jpg');
-                background-size: auto 100%;
-                background-repeat: no-repeat;
-                position: absolute;
-                left: 55%;
-                top: -5%;
-            }
-
-            .index_menu4 {
-                background-image: url('../img/index/4cards/attractions.jpg');
-                background-size: cover;
-                position: absolute;
-                left: 80%;
-                top: 5%;
-            }
-
-            .open {
-                width: 400px;
-                z-index: 3;
+                top: 100%;
+                transform: translateY(-100%);
+                color: white;
+                opacity: .7;
+                text-align: center;
+                letter-spacing: .3em;
+                line-height: 1.5em;
             }
         }
+
+        .index_menu1 {
+            background-image: url('../img/index/4cards/transportation.jpg');
+            background-size: cover;
+            position: absolute;
+            left: 5%;
+            top: -5%;
+
+
+        }
+
+        .index_menu2 {
+            background-image: url('../img/index/4cards/food.jpg');
+            background-size: cover;
+            background-position: 40% 0%;
+            position: absolute;
+            left: 30%;
+            top: 5%;
+
+        }
+
+        .index_menu3 {
+            background-image: url('../img/index/4cards/accommodation.jpg');
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 55%;
+            top: -5%;
+        }
+
+        .index_menu4 {
+            background-image: url('../img/index/4cards/attractions.jpg');
+            background-size: cover;
+            position: absolute;
+            left: 80%;
+            top: 5%;
+        }
+
+        .open {
+            width: 400px;
+            z-index: 3;
+        }
     }
-
-
 
 
     .index_title {
