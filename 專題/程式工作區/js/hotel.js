@@ -37,30 +37,48 @@ function print(index) {
         <div class="img">
         <img src="${pic1}" alt="${pic_explain1}" ></div>
         <div class="content">
-        <a href="${web1}"><h1>${name1}</h1></a>
+        <h1>${name1}<a href="${web1}">${name1}</a></h1>
         <p><i class="fa-solid fa-location-dot"></i>${address1}</p>
                     <p><i class="fa-solid fa-phone"></i>${telephone1}</p>
                 </div>
             </div>
             </td>`
+
         let A2 = `<td>
         <div class="info_card">
         <div class="img">
         <img src="${pic2}" alt="${pic_explain2}" ></div>
                 <div class="content">
-                <a href="${web2}"><h1>${name2}</h1></a>
+                <h1>${name2}
+                <a href="${web2}">${name2}</a></h1>
                     <p><i class="fa-solid fa-location-dot"></i>${address2}</p>
                     <p><i class="fa-solid fa-phone"></i>${telephone2}</p>
                 </div>
             </div>
         </td>`
-
-        if (i == N - 1 && (N % 2 != 0)) {
-            card.innerHTML += `<tr>${A1}<td></td></tr>`;
-        } else {
-            card.innerHTML += `<tr>${A1}${A2}</tr>`;
-        }
-
-
+        card.innerHTML += `<tr>${A1}${A2}</tr>`;
+        // if (i == N - 1 && (N % 2 != 0)) {
+        //     card.innerHTML += `<tr>${A1}<td></td></tr>`;
+        // } else {
+        //     card.innerHTML += `<tr>${A1}${A2}</tr>`;
+        // }
     };
+    $(document).ready(function () {
+        $('#table_id').dataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": true,
+            "bInfo": false,
+            "lengthMenu": [3],
+            "bAutoWidth": false,
+            "language": {
+                "emptyTable": "資料載入時，發生了錯誤，試試重新整理",
+                "zeroRecords": "無搜尋結果，試試更換關鍵字",
+                "oPaginate": {
+                    "sNext": '<i class="fa-solid fa-angles-right"></i>',
+                    "sPrevious": '<i class="fa-solid fa-angles-left"></i>'
+                }
+            }
+        });
+    });
 }

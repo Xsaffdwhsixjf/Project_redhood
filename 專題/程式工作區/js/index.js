@@ -2,14 +2,12 @@ let menu1 = document.querySelector('.index_menu1');
 let menu2 = document.querySelector('.index_menu2');
 let menu3 = document.querySelector('.index_menu3');
 let menu4 = document.querySelector('.index_menu4');
-let logo = document.querySelector('.logo');
 let title = document.querySelector('.index_title');
 let M1_title = document.querySelector('.menu_title1');
 let M2_title = document.querySelector('.menu_title2');
 let M3_title = document.querySelector('.menu_title3');
 let M4_title = document.querySelector('.menu_title4');
 
-setTimeout("display(logo)", 3550);
 setTimeout("display(title)", 3550);
 setTimeout("display(menu1)", 4550);
 setTimeout("display(menu2)", 5050);
@@ -51,10 +49,10 @@ function open(box1, box2, box3, box4) {
     box4.classList.remove("open");
 }
 
-function display(index) {
-    index.classList.remove('d-none');
+function display(i) {
+    i.classList.remove("d-none");
 }
 function none (index) {
-    index.classList.add('d-none')
+    index.classList.add("d-none")
     
 }

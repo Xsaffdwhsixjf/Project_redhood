@@ -1,73 +1,119 @@
-    section {
-        padding: 0px 50px;
+.dataTables_wrapper .dataTables_filter input {
+    border: 2px solid rgb(255, 255, 255, .7);
+}
 
-        h1 {
-            font-size: 1.8em;
-        }
+label {
+    color: rgb(255, 255, 255, .7);
+}
 
-        #table_id_wrapper {
 
-            #table_id {
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: rgb(255, 255, 255, .7) !important;
+}
+
+body {
+    background-image: url('../img/hotel/hotel_background.jpg');
+    background-repeat: no-repeat;
+    color: white;
+}
+
+section {
+    padding: 0% 3%;
+
+    h1 {
+        font-size: 1.8em;
+        float: left;
+    }
+
+    #table_id_wrapper {
+        #table_id {
+            border-spacing: 20px 10px;
+            height: 80%;
+
+            thead {
+                display: none;
+            }
+
+            tbody {
+                background-color: transparent;
                 height: 80%;
 
-                thead {
-                    display: none;
-                }
+                @media (max-width:1250px) {}
 
-                tbody {
-                    background-color: transparent;
+                tr {
+                    display: block;
                     height: 80%;
+                    // display: flex;
+                    // flex-direction: column;
 
-                    tr {
-                        display: block;
-                        height: 80%;
+                    td {
+                        column-gap: 25px;
+                        width: 30%;
+                        background-color: #97C9D5;
+                        opacity: .9;
+                        padding: 15px;
+                        border: 1px solid #000;
+                        border-radius: 15px;
 
-                        td {
-                            width: 30%;
-                            height: calc(65vh/3);
+                        .info_card {
+                            height: calc(59vh / 3);
+                            width: 100%;
+                            display: flex;
+                            margin-bottom: 10px;
                             background-color: transparent;
-                            padding: 15px;
 
-                            .info_card {
-                                height: calc(59vh / 3);
-                                width: 100%;
-                                display: flex;
-                                margin-bottom: 10px;
-                                background-color: transparent;
-                                border-radius: 25px;
+                            .img {
+                                width: 40%;
 
-                                .img {
-                                    width: 40%;
-
-                                    img {
-                                        width: 100%;
-                                        height: 100%;
-                                        border-radius: 25px;
-                                    }
-                                }
-
-                                .content {
-                                    width: 60%;
+                                img {
+                                    width: 100%;
                                     height: 100%;
-                                    margin-left: 30px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    row-gap: 7px;
-
-                                    h1,
-                                    p,
-                                    a {
-                                        text-decoration: unset;
-                                        color: black;
-                                        letter-spacing: .25em;
-                                    }
+                                    border-radius: 15px;
                                 }
                             }
 
+                            .content {
+                                width: 60%;
+                                height: 100%;
+                                margin-left: 30px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                row-gap: 7px;
+
+                                h1 {
+                                    position: relative;
+
+                                    a {
+                                        display: none;
+                                        position: absolute;
+                                        top: -100%;
+                                        width: 100%;
+                                        height: 30px;
+                                    }
+
+                                    &:hover {
+                                        background-color: aqua;
+
+                                        // a {
+                                        //     display: block;
+                                        // }
+                                    }
+                                }
+
+                                h1,
+                                p,
+                                a {
+                                    text-decoration: unset;
+                                    color: black;
+                                    letter-spacing: .25em;
+                                }
+                            }
                         }
+
                     }
                 }
             }
         }
     }
+}

@@ -1,5 +1,33 @@
+@charset "UTF-8";
+
+.dataTables_wrapper .dataTables_filter input {
+  border: 2px solid rgb(255, 255, 255, .7);
+}
+
+label {
+  color:rgb(255, 255, 255, .7);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: rgb(255, 255, 255, .7) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+  color: rgb(255, 255, 255, .7) !important;
+  border: 2px solid rgb(255, 255, 255, 1);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background:linear-gradient(to bottom, #ecf0f7 0%, #96c4d2 100%);
+  border: 1px solid rgb(255, 255, 255, .7);
+}
+.dataTables_wrapper .dataTables_paginate{color:rgb(255, 255, 255, .7) ;}
+body {
+  background-image: url("../img/hotel/hotel_background.jpg");
+  background-repeat: no-repeat;
+  color: white;
+}
+
 section {
-  padding: 0px 50px;
+  padding: 0% 3%;
 }
 
 section h1 {
@@ -7,6 +35,7 @@ section h1 {
 }
 
 section #table_id_wrapper #table_id {
+  border-spacing: 20px 10px;
   height: 80%;
 }
 
@@ -25,10 +54,14 @@ section #table_id_wrapper #table_id tbody tr {
 }
 
 section #table_id_wrapper #table_id tbody tr td {
+  -webkit-column-gap: 25px;
+  column-gap: 25px;
   width: 30%;
-  height: calc(65vh/3);
-  background-color: transparent;
+  background-color: #97C9D5;
+  opacity: .9;
   padding: 15px;
+  border: 1px solid #000;
+  border-radius: 15px;
 }
 
 section #table_id_wrapper #table_id tbody tr td .info_card {
@@ -39,7 +72,6 @@ section #table_id_wrapper #table_id tbody tr td .info_card {
   display: flex;
   margin-bottom: 10px;
   background-color: transparent;
-  border-radius: 25px;
 }
 
 section #table_id_wrapper #table_id tbody tr td .info_card .img {
@@ -49,7 +81,7 @@ section #table_id_wrapper #table_id tbody tr td .info_card .img {
 section #table_id_wrapper #table_id tbody tr td .info_card .img img {
   width: 100%;
   height: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 section #table_id_wrapper #table_id tbody tr td .info_card .content {
@@ -61,19 +93,36 @@ section #table_id_wrapper #table_id tbody tr td .info_card .content {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   row-gap: 7px;
 }
 
+section #table_id_wrapper #table_id tbody tr td .info_card .content h1 {
+  position: relative;
+}
+
+section #table_id_wrapper #table_id tbody tr td .info_card .content h1 a {
+  display: none;
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 30px;
+}
+
+section #table_id_wrapper #table_id tbody tr td .info_card .content h1:hover {
+  background-color: aqua;
+}
+
 section #table_id_wrapper #table_id tbody tr td .info_card .content h1,
-section #table_id_wrapper #table_id tbody tr td .info_card .content p,
-section #table_id_wrapper #table_id tbody tr td .info_card .content a {
+section #table_id_wrapper #table_id tbody tr td .info_card .content a,
+section #table_id_wrapper #table_id tbody tr td .info_card .content p {
   text-decoration: unset;
   color: black;
   letter-spacing: .25em;
 }
+
 /*# sourceMappingURL=hotel.css.map */
