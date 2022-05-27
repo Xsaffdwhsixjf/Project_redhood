@@ -1,0 +1,713 @@
+@mixin oneSix {
+    @media (max-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin overlay {
+    @media (max-height: 450px) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-image: url(../img/food/food_bg_1920x1080.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: calc(1600px + 10%);
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 5%;
+
+        #navLogo {
+            position: absolute;
+            top: 40px;
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        .nav {
+            ul {
+                display: flex;
+
+                li {
+                    display: flex;
+                    margin: 15px;
+
+                    .icon {
+                        margin: 10px;
+                        opacity: 0.9;
+
+                        i {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .theme {
+                        font-size: 12px;
+                        text-align: center;
+                        letter-spacing: .5px;
+                        color: #02171C;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    position: relative;
+    max-width: calc(1600px + 10%);
+    width: 100%;
+    height: calc(100vh - 200px);
+    margin: 0 auto;
+    padding: 0 5%;
+
+    .heading {
+        position: absolute;
+        left: 10%;
+        font-size: 40px;
+        letter-spacing: 5px;
+        color: #054E67;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    }
+
+    // .bg-box {
+    //     width: 100%;
+    //     height: 363px;
+    //     margin-top: 10%;
+    //     background-color: rgba(105, 177, 194, .72);
+    // }
+    .circle {
+        position: absolute;
+        left: 11%;
+        max-width: calc(1600px + 10%);
+        width: 90%;
+        height: calc(100vh - 200px);
+        @media (max-width: 1770px) {
+            width: 86%;
+            left: 14%;
+        }
+        @media (max-width: 1550px) {
+            width: 84%;
+            left: 16%;
+        }
+        @media (max-width: 1530px) {
+            width: 80%;
+            left: 20%;
+        }
+        
+
+        // size: 250px change
+        .food1 {
+            position: relative;
+            top: 7%;
+            left: 40%;
+            background-image: url(../img/food/food1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 38%;
+            }
+            @media (max-width: 1600px) {
+                left: 36%;
+            }
+            @media (max-width: 1580px) {
+                left: 34%;
+            }
+            @media (max-width: 1550px) {
+                top: 5%;
+            }
+            @media (max-width: 1530px) {
+                top: 32%;
+                left: 12%;
+            }
+            @media (max-width: 1450px) {
+                left: 30%;
+            }
+
+        }
+
+        // size: 200px change
+        .food2 {
+            position: relative;
+            top: -5%;
+            left: 7%;
+            background-image: url(../img/food/food2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 5%;
+            }
+            @media (max-width: 1600px) {
+                left: 4%;
+            }
+            @media (max-width: 1580px) {
+                left: 2%;
+            }
+            @media (max-width: 1550px) {
+                top: -1%;
+                left: 1%;
+            }
+            @media (max-width: 1530px) {
+                left: -1%;
+            }
+            @media (max-width: 1500px) {
+                left: -2%;
+            }
+            @media (max-width: 1450px) {
+                left: -3%;
+            }
+        }
+
+        // size: 300px change
+        .food3 {
+            position: relative;
+            top: -16%;
+            left: 44%;
+            background-image: url(../img/food/food3.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                top: -18%;
+                left: 42%;
+            }
+            @media (max-width: 1600px) {
+                left: 40%;
+            }
+            @media (max-width: 1580px) {
+                left: 39%;
+            }
+            @media (max-width: 1550px) {
+                top: -18%;
+            }
+            @media (max-width: 1530px) {
+                top: -10%;
+                left: 36%;
+            }
+            @media (max-width: 1450px) {
+                left: 34%;
+            }
+        }
+
+        // size: 200px change
+        .food4 {
+            position: relative;
+            top: -94%;
+            left: 59%;
+            background-image: url(../img/food/food4.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 57%;
+            }
+            @media (max-width: 1600px) {
+                left: 55%;
+            }
+            @media (max-width: 1580px) {
+                left: 54%;
+            }
+            @media (max-width: 1550px) {
+                top: -87%;
+            }
+            @media (max-width: 1530px) {
+                top: -78%;
+                left: 52%;
+            }
+            @media (max-width: 1450px) {
+                left: 50%;
+            }
+        }
+
+        // size: 250px change
+        .food5 {
+            position: relative;
+            top: -90%;
+            left: 65%;
+            background-image: url(../img/food/food5.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 64%;
+            }
+            @media (max-width: 1600px) {
+                left: 62%;
+            }
+            @media (max-width: 1580px) {
+                left: 60%;
+            }
+            @media (max-width: 1550px) {
+                top: -85%;
+                left: 61%;
+            }
+            @media (max-width: 1530px) {
+                top: -74%;
+                left: 58%;
+            }
+            @media (max-width: 1450px) {
+                left: 56%;
+            }
+        }
+
+        // size: 200px change
+        .food6 {
+            position: relative;
+            top: -86%;
+            left: 60%;
+            background-image: url(../img/food/food6.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 60%;
+            }
+            @media (max-width: 1600px) {
+                left: 57%;
+            }
+            @media (max-width: 1550px) {
+                top: -78%;
+            }
+            @media (max-width: 1530px) {
+                top: -70%;
+                left: 55%;
+            }
+            @media (max-width: 1450px) {
+                left: 53%;
+            }
+        }
+
+        // size: 250px change
+        .food7 {
+            position: relative;
+            top: -127%;
+            left: 9%;
+            background-image: url(../img/food/food7.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 7%;
+            }
+            @media (max-width: 1580px) {
+                left: 5%;
+            }
+            @media (max-width: 1550px) {
+                top: -111%;
+            }
+            @media (max-width: 1530px) {
+                top: -98%;
+                left: 3%;
+            }
+            @media (max-width: 1450px) {
+                left: 1%;
+            }
+
+        }
+
+        // size: 200px change
+        .food8 {
+            position: relative;
+            top: -220%;
+            left: 19%;
+            background-image: url(../img/food/food8.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 17%;
+            }
+            @media (max-width: 1580px) {
+                left: 15%;
+            }
+            @media (max-width: 1550px) {
+                top: -200%;
+            }
+            @media (max-width: 1530px) {
+                top: 188%;
+                left: 13%;
+            }
+            @media (max-width: 1450px) {
+                left: 11%;
+            }
+        }
+
+        // size: 300px change
+        .food9 {
+            position: relative;
+            top: -220%;
+            left: 23%;
+            background-image: url(../img/food/food9.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 21%;
+            }
+            @media (max-width: 1600px) {
+                left: 19%;
+            }
+            @media (max-width: 1580px) {
+                left: 17%;
+            }
+            @media (max-width: 1550px) {
+                top: -198%;
+            }
+            @media (max-width: 1530px) {
+                top: -183%;
+                left: 14%;
+            }
+            @media (max-width: 1450px) {
+                left: 12%;
+            }
+        }
+
+        // size: 200px change
+        .food10 {
+            position: relative;
+            top: -216%;
+            left: 31%;
+            background-image: url(../img/food/food10.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1650px) {
+                left: 29%;
+            }
+            @media (max-width: 1600px) {
+                left: 27%;
+            }
+            @media (max-width: 1580px) {
+                left: 28%;
+            }
+            @media (max-width: 1550px) {
+                top: -194%;
+            }
+            @media (max-width: 1530px) {
+                top: -180%;
+                left: 27%;
+            }
+        }
+
+    }
+
+}
+
+.twoHundred {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    transition: all .25s;
+
+    &:hover {
+        z-index: 2;
+        transform: scale(1.5);
+    }
+
+    @media (max-width: 1550px) {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.twoHundred-b {
+    position: absolute;
+    margin-top: 100px;
+    width: 200px;
+    height: 100px;
+    border-radius: 0 0 100px 100px;
+    color: #fff;
+    background-color: rgba(5, 78, 103, .8);
+
+    @media (max-width: 1550px) {
+    margin-top: 90px;
+    width: 180px;
+    height: 90px;
+    border-radius: 0 0 90px 90px;
+    }
+    
+
+    .number {
+        margin-top: -15%;
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+    }
+
+    .title {
+        margin: 2px;
+        font-size: 19px;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+
+        @media (max-width: 1550px) {
+            font-size: 15px;
+            }
+    }
+
+}
+
+.twoFive {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    transition: all .25s;
+
+    &:hover {
+        z-index: 2;
+        transform: scale(1.5);
+    }
+
+    @media (max-width: 1550px) {
+        width: 230px;
+        height: 230px;
+        }
+
+}
+
+.twoFive-b {
+    position: absolute;
+    margin-top: 125px;
+    width: 250px;
+    height: 125px;
+    border-radius: 0 0 125px 125px;
+    color: #fff;
+    background-color: rgba(5, 78, 103, .8);
+
+    @media (max-width: 1550px) {
+        margin-top: 115px;
+        width: 230px;
+        height: 115px;
+        border-radius: 0 0 115px 115px;
+        }
+
+    .number {
+        margin-top: -12%;
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+    }
+
+    .title {
+        margin: 6px;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+
+        @media (max-width: 1550px) {
+           font-size: 20px;
+            }
+    }
+}
+
+.threeHundred {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    transition: all .25s;
+
+    &:hover {
+        z-index: 2;
+        transform: scale(1.5);
+    }
+
+    @media (max-width: 1550px) {
+        width: 280px;
+        height: 280px;
+    }
+
+    @media (max-width: 1530px) {
+        width: 230px;
+        height: 230px;
+    }
+
+}
+
+.threeHundred-b {
+    position: absolute;
+    margin-top: 150px;
+    width: 300px;
+    height: 150px;
+    border-radius: 0 0 150px 150px;
+    color: #fff;
+    background-color: rgba(5, 78, 103, .8);
+
+    @media (max-width: 1550px) {
+        margin-top: 140px;
+        width: 280px;
+        height: 140px;
+        border-radius: 0 0 140px 140px;
+    }
+    @media (max-width: 1530px) {
+        margin-top: 115px;
+        width: 230px;
+        height: 115px;
+        border-radius: 0 0 115px 115px;
+    }
+
+    .number {
+        margin-top: -10%;
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+    
+        @media (max-width: 1530px) {
+            margin-top: -12%;
+        }
+    
+    }
+    
+    .title {
+        margin: 18px;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .9);
+
+        @media (max-width: 1550px) {
+           font-size: 23px;
+        }
+        @media (max-width: 1530px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(5, 78, 103, .8);
+    overflow-y: hidden;
+    transition: 0.5s;
+
+    @include overlay {
+        overflow-y: auto;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        padding: 8px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+        @include overlay {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+
+        &:hover {
+            color: #f1f1f1;
+        }
+
+        &:focus {
+            color: #f1f1f1;
+        }
+    }
+
+    .overlay-content {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 20%;
+        /* left: 50%; */
+        width: 100%;
+        margin-top: 30px;
+
+        .container {
+            img {
+                width: 500px;
+                height: 500px;
+                border: 5px solid #fff;
+                border-radius: 50%;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+            }
+        }
+
+        .description {
+            margin-left: 70px;
+            padding-top: 85px;
+
+            .number {
+                font-size: 60px;
+                color: #fff;
+                text-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+            }
+
+            .title {
+                font-size: 30px;
+                color: #fff;
+                text-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+            }
+
+            .location {
+                a {
+                    padding: 0;
+                    font-size: 25px;
+                    color: #fff;
+                }
+            }
+
+            .text {
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+    }
+}
