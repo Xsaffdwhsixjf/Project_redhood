@@ -1,236 +1,232 @@
 @charset "UTF-8";
-
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans TC', sans-serif;
-    background-image: url();
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: url();
 }
 
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: relative;
-    max-width: calc(1600px + 10%);
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
 nav .container #navLogo {
-    position: absolute;
-    top: 40px;
-    width: 80px;
-    opacity: 0.7;
-    margin-right: 50px;
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  opacity: 0.7;
+  margin-right: 50px;
 }
 
 nav .container .nav .menu-wrap .toggler {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    z-index: 2;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-    /* Toggler Animation */
-    /* Turns Lines Into X */
-    /* Rotate On Hover When Checked */
-    /* Show Menu */
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  /* Toggler Animation */
+  /* Turns Lines Into X */
+  /* Rotate On Hover When Checked */
+  /* Show Menu */
 }
 
-nav .container .nav .menu-wrap .toggler:checked+.hamburger>div {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
-nav .container .nav .menu-wrap .toggler:checked+.hamburger>div:before,
-nav .container .nav .menu-wrap .toggler:checked+.hamburger>div:after {
-    top: 0;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div:before,
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-nav .container .nav .menu-wrap .toggler:checked:hover+.hamburger>div {
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+nav .container .nav .menu-wrap .toggler:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
-nav .container .nav .menu-wrap .toggler:checked~.menu {
-    visibility: visible;
+nav .container .nav .menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
 }
 
-nav .container .nav .menu-wrap .toggler:checked~.menu>.inner-layer {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition-duration: var(--menu-speed);
-    transition-duration: var(--menu-speed);
+nav .container .nav .menu-wrap .toggler:checked ~ .menu > .inner-layer {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: var(--menu-speed);
+          transition-duration: var(--menu-speed);
 }
 
-nav .container .nav .menu-wrap .toggler:checked~.menu>.through-layer {
-    opacity: 1;
-    -webkit-transition: opacity 0.4s ease 0.4s;
-    transition: opacity 0.4s ease 0.4s;
+nav .container .nav .menu-wrap .toggler:checked ~ .menu > .through-layer {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
 }
 
 nav .container .nav .menu-wrap .hamburger {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
-    background-color: blanchedalmond;
-    visibility: hidden;
-    /* 變版開關 */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background-color: blanchedalmond;
+  visibility: hidden;
+  /* 變版開關 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav .container .nav .menu-wrap .hamburger .hambar {
-    /* Hamburger Line */
-    position: relative;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  /* Hamburger Line */
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-nav .container .nav .menu-wrap .hamburger .hambar::before,
-nav .container .nav .menu-wrap .hamburger .hambar::after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: -10px;
-    width: 100%;
-    height: 2px;
-    background: inherit;
-    /* Hamburger Lines - Top & Bottom */
+nav .container .nav .menu-wrap .hamburger .hambar::before, nav .container .nav .menu-wrap .hamburger .hambar::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  /* Hamburger Lines - Top & Bottom */
 }
 
 nav .container .nav .menu-wrap .hamburger .hambar::after {
-    top: 10px;
-    /* Moves Line Down */
+  top: 10px;
+  /* Moves Line Down */
 }
 
 nav .container .nav .menu-wrap .menu {
-    width: 100%;
-    height: 100%;
-    visibility: visible;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav .container .nav .menu-wrap .menu .inner-layer {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    /* 變化出現菜單效果 */
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  /* 變化出現菜單效果 */
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 nav .container .nav .menu-wrap .menu .inner-layer .through-layer {
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
-    opacity: 1;
-    /* 一開始先透明 */
-    -webkit-transition: opacity 0.4s ease;
-    transition: opacity 0.4s ease;
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 1;
+  /* 一開始先透明 */
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 nav .container .nav .menu-wrap ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
 }
 
 nav .container .nav .menu-wrap ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
 }
 
 nav .container .nav .menu-wrap ul li .icon {
-    margin: 5px;
-    opacity: 0.9;
+  margin: 5px;
+  opacity: 0.9;
 }
 
 nav .container .nav .menu-wrap ul li .icon i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 nav .container .nav .menu-wrap ul li a {
-    letter-spacing: .5px;
+  letter-spacing: .5px;
 }
 
 nav .container .nav .menu-wrap ul li .theme {
-    font-size: 12px;
-    text-align: center;
-    color: #02171C;
-    opacity: 0.9;
+  font-size: 12px;
+  text-align: center;
+  color: #02171C;
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 899px) {
-    nav .container .nav .menu-wrap .hamburger {
-        visibility: visible;
-    }
-
-    nav .container .nav .menu-wrap .menu {
-        visibility: hidden;
-    }
+  nav .container .nav .menu-wrap .hamburger {
+    visibility: visible;
+  }
+  nav .container .nav .menu-wrap .menu {
+    visibility: hidden;
+  }
 }
-
-/*# sourceMappingURL=nav.css.map */
+/*# sourceMappingURL=nav-mobile.css.map */

@@ -1,15 +1,32 @@
-.dataTables_wrapper .dataTables_filter input {
-    border: 2px solid rgb(255, 255, 255, .7);
-}
+// .dataTables_wrapper {
+//     label {
+//         color: rgb(255, 255, 255, .7);
+//     }
+// }
 
-label {
-    color: rgb(255, 255, 255, .7);
-}
+// .dataTables_wrapper {
+//     .dataTables_filter {
+//         input {
+//             border: 2px solid rgb(255, 255, 255, .7);
+//         }
+//     }
 
+//     .dataTables_paginate {
+//         .paginate_button {
+//             color: rgb(255, 255, 255, .7) !important;
 
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    color: rgb(255, 255, 255, .7) !important;
-}
+//             .current:hover {
+//                 color: rgb(255, 255, 255, .7) !important;
+//                 border: 2px solid rgb(255, 255, 255, 1);
+//             }
+//         }
+
+//         .paginate_button:hover {
+//             background: linear-gradient(to bottom, #ecf0f7 0%, #96c4d2 100%);
+//             border: 1px solid rgb(255, 255, 255, .7);
+//         }
+//     }
+// }
 
 body {
     background-image: url('../img/hotel/hotel_background.jpg');
@@ -38,7 +55,7 @@ section {
                 background-color: transparent;
                 height: 80%;
 
-                @media (max-width:1250px) {}
+                // @media (max-width:1250px) {}
 
                 tr {
                     display: block;
@@ -81,24 +98,16 @@ section {
                                 justify-content: center;
                                 row-gap: 7px;
 
-                                h1 {
-                                    position: relative;
+                                a {
+                                    display: none;
+                                    position: absolute;
+                                    top: -100%;
+                                    width: 100%;
+                                    height: 30px;
+                                }
 
-                                    a {
-                                        display: none;
-                                        position: absolute;
-                                        top: -100%;
-                                        width: 100%;
-                                        height: 30px;
-                                    }
-
-                                    &:hover {
-                                        background-color: aqua;
-
-                                        // a {
-                                        //     display: block;
-                                        // }
-                                    }
+                                &:hover {
+                                    background-color: rgb(255, 255, 255, .7);
                                 }
 
                                 h1,

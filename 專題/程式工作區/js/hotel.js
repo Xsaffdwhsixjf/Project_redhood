@@ -31,31 +31,58 @@ function print(index) {
         if (pic2 == "") {
             pic2 = "https://buysmartjapan.com/assets/no_image-709ea11ceed07452132945912fd5c436755e3eddd89d92eed4fd66128e8dcf7a.png"
         };
-
-        let A1 = `<td>
-        <div class="info_card">
-        <div class="img">
-        <img src="${pic1}" alt="${pic_explain1}" ></div>
-        <div class="content">
-        <h1>${name1}<a href="${web1}">${name1}</a></h1>
-        <p><i class="fa-solid fa-location-dot"></i>${address1}</p>
-                    <p><i class="fa-solid fa-phone"></i>${telephone1}</p>
-                </div>
+        let A1;
+        let A2;
+if(web1==''){
+     A1 = `<td>
+    <div class="info_card">
+    <div class="img">
+    <img src="${pic1}" alt="${pic_explain1}" ></div>
+    <div class="content">
+    <h1>${name1}</h1>
+    <p><i class="fa-solid fa-location-dot"></i>${address1}</p>
+                <p><i class="fa-solid fa-phone"></i>${telephone1}</p>
             </div>
-            </td>`
-
-        let A2 = `<td>
-        <div class="info_card">
-        <div class="img">
-        <img src="${pic2}" alt="${pic_explain2}" ></div>
-                <div class="content">
-                <h1>${name2}
-                <a href="${web2}">${name2}</a></h1>
-                    <p><i class="fa-solid fa-location-dot"></i>${address2}</p>
-                    <p><i class="fa-solid fa-phone"></i>${telephone2}</p>
-                </div>
-            </div>
+        </div>
         </td>`
+}else{
+     A1 = `<td>
+    <div class="info_card">
+    <div class="img">
+    <img src="${pic1}" alt="${pic_explain1}" ></div>
+    <div class="content">
+    <a href="${web1}" target=_blank><h1>${name1}</h1></a>
+    <p><i class="fa-solid fa-location-dot"></i>${address1}</p>
+                <p><i class="fa-solid fa-phone"></i>${telephone1}</p>
+            </div>
+        </div>
+        </td>`
+}
+if(web2==''){
+     A2 = `<td>
+    <div class="info_card">
+    <div class="img">
+    <img src="${pic2}" alt="${pic_explain2}" ></div>
+    <div class="content">
+    <h1>${name2}</h1>
+    <p><i class="fa-solid fa-location-dot"></i>${address2}</p>
+                <p><i class="fa-solid fa-phone"></i>${telephone2}</p>
+            </div>
+        </div>
+        </td>`
+}else{
+     A2 = `<td>
+    <div class="info_card">
+    <div class="img">
+    <img src="${pic2}" alt="${pic_explain2}" ></div>
+    <div class="content">
+    <a href="${web2}" target=_blank><h1>${name2}</h1></a>
+    <p><i class="fa-solid fa-location-dot"></i>${address2}</p>
+                <p><i class="fa-solid fa-phone"></i>${telephone2}</p>
+            </div>
+        </div>
+        </td>`
+}
         card.innerHTML += `<tr>${A1}${A2}</tr>`;
         // if (i == N - 1 && (N % 2 != 0)) {
         //     card.innerHTML += `<tr>${A1}<td></td></tr>`;
