@@ -1,41 +1,65 @@
-// .dataTables_wrapper {
-//     label {
-//         color: rgb(255, 255, 255, .7);
-//     }
-// }
+.dataTables_wrapper {
+    label {
+        color: rgba(255, 255, 255, 0.7);
+    }
 
-// .dataTables_wrapper {
-//     .dataTables_filter {
-//         input {
-//             border: 2px solid rgb(255, 255, 255, .7);
-//         }
-//     }
+    .dataTables_filter {
+        input {
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+    }
 
-//     .dataTables_paginate {
-//         .paginate_button {
-//             color: rgb(255, 255, 255, .7) !important;
+    .dataTables_paginate {
+        .ellipsis {
+            color: rgba(255, 255, 255, 0.7);
+        }
 
-//             .current:hover {
-//                 color: rgb(255, 255, 255, .7) !important;
-//                 border: 2px solid rgb(255, 255, 255, 1);
-//             }
-//         }
+        .paginate_button {
+            color: rgba(255, 255, 255, 0.7) !important;
 
-//         .paginate_button:hover {
-//             background: linear-gradient(to bottom, #ecf0f7 0%, #96c4d2 100%);
-//             border: 1px solid rgb(255, 255, 255, .7);
-//         }
-//     }
-// }
+            .current:hover {
+                color: rgba(255, 255, 255, 0.7) !important;
+                border: 2px solid rgb(255, 255, 255);
+            }
+        }
+
+        .paginate_button:hover {
+            background: linear-gradient(to bottom, #ecf0f7 0%, #96c4d2 100%);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .paginate_button.current {
+            color: rgba(255, 255, 255, 0.7) !important;
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        .paginate_button.current:hover {
+            background: linear-gradient(to bottom, #ecf0f7 0%, #96c4d2 100%);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+    }
+}
 
 body {
     background-image: url('../img/hotel/hotel_background.jpg');
     background-repeat: no-repeat;
     color: white;
+
+    @media (max-width:1250px) {
+        background-size: cover;
+        background-repeat: repeat;
+    }
 }
 
 section {
     padding: 0% 3%;
+
+    @media (max-width:600px) {
+        padding: 0;
+        ;
+    }
 
     h1 {
         font-size: 1.8em;
@@ -52,16 +76,28 @@ section {
             }
 
             tbody {
+                margin-top: 20px;
                 background-color: transparent;
                 height: 80%;
 
-                // @media (max-width:1250px) {}
+                @media (max-width:1250px) {
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    row-gap: 15px;
+                }
 
                 tr {
                     display: block;
                     height: 80%;
-                    // display: flex;
-                    // flex-direction: column;
+
+                    @media (max-width:1250px) {
+                        width: 100%;
+                        height: 40%;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+                    }
 
                     td {
                         column-gap: 25px;
@@ -72,8 +108,21 @@ section {
                         border: 1px solid #000;
                         border-radius: 15px;
 
+                        @media (max-width:1250px) {
+                            width: 70%;
+                            margin: auto;
+                        }
+
+                        @media (max-width:786px) {
+                            width: 85%;
+                        }
+
+                        @media (max-width:600px) {
+                            width: 100%;
+                        }
+
                         .info_card {
-                            height: calc(59vh / 3);
+                            height: 20vh;
                             width: 100%;
                             display: flex;
                             margin-bottom: 10px;
@@ -81,6 +130,11 @@ section {
 
                             .img {
                                 width: 40%;
+
+                                @media (max-width:786px) {
+                                    width: 44%;
+
+                                }
 
                                 img {
                                     width: 100%;
@@ -97,17 +151,13 @@ section {
                                 flex-direction: column;
                                 justify-content: center;
                                 row-gap: 7px;
+                                position: relative;
 
                                 a {
-                                    display: none;
-                                    position: absolute;
-                                    top: -100%;
+                                    // position: absolute;
+                                    // top: 0%;
                                     width: 100%;
                                     height: 30px;
-                                }
-
-                                &:hover {
-                                    background-color: rgb(255, 255, 255, .7);
                                 }
 
                                 h1,
@@ -125,4 +175,19 @@ section {
             }
         }
     }
+}
+
+.top_btn {
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    transform: translate(-140%, -140%);
+
+    img {
+        height: 100px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }

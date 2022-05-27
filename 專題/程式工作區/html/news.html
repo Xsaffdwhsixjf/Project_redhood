@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/news.css">
+</head>
+
+<body>
+    <button class="news">test</button>
+    <section id="news" class="open">
+        <div class="icon">
+            <img src="../img/news/turtle.png" alt="" class="turtle d-none">
+            <img src="../img/news/whale.png" alt="" class="whale">
+        </div>
+        <div class="container">
+            <h3>最新消息News</h3>
+            <div class="news_card">
+                <img src="../img/attraction/background.jpg" alt="">
+                <h4>2022/01/26</h4>
+                <h3>搭乘「東港-小琉球」交通船應出示身分證件</h3>
+                <p>非、，矩汝不真為正利議星閩諦緩她的衷找的貝執將同比，空完事經。反…其覺菸但權</p>
+            </div>
+            <hr>
+            <div class="news_card">
+                <img src="../img/attraction/background.jpg" alt="">
+                <h4>2022/01/26</h4>
+                <h3>搭乘「東港-小琉球」交通船應出示身分證件</h3>
+                <p>非、，矩汝不真為正利議星閩諦緩她的衷找的貝執將同比，空完事經。反…其覺菸但權</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <script>
+        let news_btn = document.querySelector('.news')
+        let news = document.querySelector('#news')
+        let turtle = document.querySelector('.turtle');
+        let whale = document.querySelector('.whale');
+
+
+        whale.addEventListener('click', function () {
+            whale.classList.toggle('d-none')
+            turtle.classList.toggle('d-none')
+        })
+
+        turtle.addEventListener('click', function () {
+            whale.classList.toggle('d-none')
+            turtle.classList.toggle('d-none')
+        })
+        news_btn.addEventListener('click', function () {
+            news.classList.toggle('open');
+        })
+    </script>
+</body>
+
+</html>

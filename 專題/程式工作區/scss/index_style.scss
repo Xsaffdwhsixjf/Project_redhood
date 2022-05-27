@@ -66,9 +66,11 @@ p {
                 height: 100px;
             }
         }
+
         .open {
             width: 400px;
             z-index: 3;
+
             @media (max-width:1250px) {
                 width: 100%;
             }
@@ -114,14 +116,14 @@ p {
         top: -5%;
 
         @media (max-width:1250px) {
-            background-image: url('../img/index/4cards/515x150/交通資訊515x150.png');
+            background-image: url('../img/index/4cards/515x150/transportation515x150.png');
             position: relative;
             top: 0%;
             left: 0%;
         }
 
         @media (max-width:700px) {
-            background-image: url('../img/index/4cards/260x100/交通資訊260x100.png');
+            background-image: url('../img/index/4cards/260x100/transportation260x100.png');
         }
     }
 
@@ -134,14 +136,14 @@ p {
         top: 5%;
 
         @media (max-width:1250px) {
-            background-image: url('../img/index/4cards/515x150/吃飽喝足515x150.png');
+            background-image: url('../img/index/4cards/515x150/food515x150.png');
             position: relative;
             top: 0%;
             left: 0%;
         }
 
         @media (max-width:700px) {
-            background-image: url('../img/index/4cards/260x100/吃飽喝足260x100.png');
+            background-image: url('../img/index/4cards/260x100/food260x100.png');
         }
     }
 
@@ -154,14 +156,14 @@ p {
         top: -5%;
 
         @media (max-width:1250px) {
-            background-image: url('../img/index/4cards/515x150/夢入佳境515x150.png');
+            background-image: url('../img/index/4cards/515x150/accommodation515x150.png');
             position: relative;
             top: 0%;
             left: 0%;
         }
 
         @media (max-width:700px) {
-            background-image: url('../img/index/4cards/260x100/夢入佳境260x100.png');
+            background-image: url('../img/index/4cards/260x100/accommodation260x100.png');
             background-size: 100% 100%;
         }
     }
@@ -174,18 +176,18 @@ p {
         top: 5%;
 
         @media (max-width:1250px) {
-            background-image: url('../img/index/4cards/515x150/海闊天空515x150.png');
+            background-image: url('../img/index/4cards/515x150/attractions515x150.png');
             position: relative;
             top: 0%;
             left: 0%;
         }
 
         @media (max-width:700px) {
-            background-image: url('../img/index/4cards/260x100/海闊天空260x100.png');
+            background-image: url('../img/index/4cards/260x100/attractions260x100.png');
         }
     }
 
-    
+
 }
 
 
