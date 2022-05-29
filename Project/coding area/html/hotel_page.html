@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/hotel.css">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container" id="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img id="navLogo" src="../img/nav/Logo.png" alt="小琉球Logo">
+            </a>
+            <!-- Navbar -->
+            <div class="nav">
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <a href="#" class="theme">水陸交通 <br> Transportation</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa-solid fa-fish-fins"></i>
+                        </div>
+                        <a href="#" class="theme">吃飽喝足 <br> Local Cuisine</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <a href="#" class="theme">夢入佳境 <br> Accommodation</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                        </div>
+                        <a href="#" class="theme">海闊天空 <br> Attraction</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <a href="#" class="theme">最新消息 <br> News</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="hotel_info">
+            </tbody>
+        </table>
+    </section>
+    <a href="#container" class="top_btn d-none"><img src="../img/hotel/dolphin.png" alt=""></a>
+    <script src="../js/hotel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js">
+    </script>
+</body>
+</html>

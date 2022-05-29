@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background: url(../img/transp/水路交通背景.jpg) no-repeat;
+    background-size: cover;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: calc(1600px + 10%);
+        width: 90%;
+        padding:0;
+        margin:10px 10%;
+
+            .navLogo {
+            position: absolute;
+            top: 40px;
+            left:20px;
+            width: 160px;
+            opacity: 0.7;
+        }
+
+        .nav {
+            ul {
+                display: flex;
+                padding:5px;
+                
+            
+
+                li {
+                    display: flex;
+                    margin: 15px;
+                    margin-right: 5px;
+
+                    .icon {
+                        margin: 15px;
+
+                        i {
+                            font-size: 18px;
+                        }
+
+                        opacity: 0.9;
+                    }
+
+                    a {
+                        letter-spacing: .5px;
+                        font-size: 18px;
+                    }
+
+                    .theme {
+                        font-size: 18px;
+                        text-align: center;
+                        color: #02171C;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+
+    height: 80px;
+    margin: 20px 5%;
+    border: 2px;
+
+
+    .titleBox {
+        width: calc(100vw - 5%);
+        background: linear-gradient(90deg, rgba(119,165,176,1) 11%, rgba(216,238,244,1) 53%, rgba(191,244,255,0) 100%);
+        border-radius: 30px;
+        opacity: 0.7;
+        font-size: 36px;
+        color: white;
+        font-weight: 400em;
+        line-height: 80px;
+        text-align: justify;
+        letter-spacing: 5px;
+        padding-left: 50px;
+        opacity: 0.9;
+    }
+}
+
+#info {
+    max-width: 100%;
+    width: 1500px;
+    padding: 10px 7%;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+
+    h2 {
+        margin: 10px;
+    }
+
+
+    p {
+        padding-left: 20px;
+        white-space: pre-line;
+    }
+
+    table {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 20px;
+        margin: 10px;
+        background-color: #96D4D4;
+        letter-spacing: 1px;
+        text-align: center;
+        border-radius: 5px;
+        opacity: 0.9;
+    }
+
+    dt {
+        line-height: 55px;
+        white-space: pre-line;
+
+        dd {
+            line-height: 30px;
+            white-space: pre-line;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        width: 1200px;
+        transform: rotate(20deg);
+
+    }
+
+    iframe {
+        margin: 50px;
+        border-radius: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 866px) {
+
+    section {
+        line-height: 50px;
+        max-width: 80%;
+
+        .midBox {
+            display: none;
+        }
+    }
+
+    .oilstop {
+        width: 100%;
+        padding: 50px;
+        border-radius: 50px;
+    }
+
+
+
+}

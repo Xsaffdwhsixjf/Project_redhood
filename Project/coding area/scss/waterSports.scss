@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-image: url(../img/watersport/水上玩樂背景.jpg);
+}
+
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: calc(1600px + 10%);
+        width: 100wh;
+        margin: 0 auto;
+        padding: 0 5%;
+
+        #navLogo {
+            position: absolute;
+            top: 30px;
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        .navlist {
+
+            label {
+
+                img {
+                    width: 50px;
+                    display: flex;
+                }
+
+            }
+
+            .dropdown {
+                display: none;
+
+                ul {
+                    li {
+                        display: flex;
+                        margin: 15px;
+
+                        .icon {
+                            margin: 10px;
+
+                            i {
+                                font-size: 18px;
+                            }
+
+                            opacity: 0.9;
+                        }
+
+                        .theme {
+                            font-size: 12px;
+                            text-align: center;
+                            color: #02171C;
+                            opacity: 0.9;
+                        }
+                    }
+
+                    &:show {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.show {
+    display: flex;
+}
+
+// 水上遊玩
+#watersports {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 150px;
+}
+
+.wrapper {
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    max-width: 100wh;
+    // max-height: 1200px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2vmin;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.square {
+    z-index: 1;
+    grid-column: span 2;
+    max-width: 100%;
+    margin-bottom: -52%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: scale(1);
+    transition: all .25s;
+
+    &:nth-child(7n + 1) {
+        grid-column: 2 / span 2;
+    }
+
+    &:hover {
+        z-index: 2;
+        transform: scale(1.5);
+    }
+}
+
+
+
+@media screen and (max-width: 866px) {
+
+    .navlist {
+
+
+        #menubar:checked~.dropddown {
+            display: flex;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        flex-grow: 1;
+        margin-top: 150px;
+        max-width: 100wh;
+        // max-height: 100;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2vmin;
+        justify-items: center;
+        align-items: center;
+
+        .square {
+            z-index: 1;
+            clip-path: none;
+            grid-column: span 1;
+            grid-row: span 1;
+            max-width: 80%;
+            margin: 10px;
+
+            transform: scale(1);
+            transition: all .5s;
+
+        }
+    }
+
+    // .wrapper {
+    //     grid-template-columns: auto auto auto auto;
+    //     grid-template-rows: 200px;
+    //     grid-gap: 10px;
+    //     padding: 10px;
+    //     clip-path: none;
+
+    //     &:nth-child(7n + 1) {
+    //         gridFF-column: 2 / span 2;
+    //     }
+    // }
+}
