@@ -13,6 +13,7 @@ setTimeout("display(menu1)", 4550);
 setTimeout("display(menu2)", 5050);
 setTimeout("display(menu3)", 5550);
 setTimeout("display(menu4)", 6050);
+
 menu1.addEventListener('mouseover', function () {
     open(menu1, menu2, menu3, menu4);
     display(M1_title);
@@ -46,13 +47,14 @@ function open(box1, box2, box3, box4) {
     box1.classList.add("open");
     box2.classList.remove("open");
     box3.classList.remove("open");
-    box4.classList.remove("open");
+    box4.classList.remove("open");   
 }
 
 function display(i) {
     i.classList.remove("d-none");
 }
-function none (index) {
+
+function none(index) {
     index.classList.add("d-none")
-    
+
 }

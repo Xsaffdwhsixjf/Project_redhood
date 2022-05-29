@@ -24,11 +24,11 @@ p {
     }
 
     .menu {
-        width: 1090px;
-        height: 600px;
+        width: 74%;
+        height: 86%;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 44%;
+        left: 47%;
         transform: translate(-46%, -42%);
         display: flex;
         column-gap: 30px;
@@ -36,11 +36,17 @@ p {
         @media (max-width:1250px) {
             transform: translate(-50%, -50%);
             flex-direction: column;
-            justify-content: space-between;
-            width: 41%;
-            height: 80vh;
+            row-gap: 25px;
+            width: 43%;
+            height: 97vh;
+            top: 50%;
+            left: 50%;
         }
 
+        @media (max-width:786px) {
+            width: 69%;
+            height: 80vh;
+        }
         @media (max-width:540px) {
             width: 69%;
             height: 70vh;
@@ -51,16 +57,22 @@ p {
         .index_menu3,
         .index_menu4 {
             width: 200px;
-            height: 93%;
+            height: 100%;
             transition: 0.8s;
-            animation: menu_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
+            animation: menu_animation1280 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
             animation-fill-mode: forwards;
 
             @media (max-width:1250px) {
                 width: 100%;
-                height: 150px;
+                height: calc((100% - 75px)/4);
+                transition: 0.8s;
+                animation: menu_animation1250 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
+                animation-fill-mode: forwards;
             }
-
+            @media (max-width:786px) {
+            width:100%;
+            height: 120px;
+            }
             @media (max-width:540px) {
                 width: 100%;
                 height: 100px;
@@ -98,7 +110,8 @@ p {
             padding-top: 3%;
 
             @media (max-width:1250px) {
-                height: 45%;
+                height: 100%;
+                font-size: 1em;
             }
 
             @media (max-width:540px) {
@@ -122,7 +135,7 @@ p {
             left: 0%;
         }
 
-        @media (max-width:700px) {
+        @media (max-width:786px) {
             background-image: url('../img/index/4cards/260x100/transportation260x100.png');
         }
     }
@@ -142,7 +155,7 @@ p {
             left: 0%;
         }
 
-        @media (max-width:700px) {
+        @media (max-width:786px) {
             background-image: url('../img/index/4cards/260x100/food260x100.png');
         }
     }
@@ -162,7 +175,7 @@ p {
             left: 0%;
         }
 
-        @media (max-width:700px) {
+        @media (max-width:786px) {
             background-image: url('../img/index/4cards/260x100/accommodation260x100.png');
             background-size: 100% 100%;
         }
@@ -171,6 +184,7 @@ p {
     .index_menu4 {
         background-image: url('../img/index/4cards/attractions.jpg');
         background-size: cover;
+        background-position: 75% 0%;
         position: absolute;
         left: 80%;
         top: 5%;
@@ -182,7 +196,7 @@ p {
             left: 0%;
         }
 
-        @media (max-width:700px) {
+        @media (max-width:786px) {
             background-image: url('../img/index/4cards/260x100/attractions260x100.png');
         }
     }
@@ -227,12 +241,22 @@ p {
     }
 }
 
-@keyframes menu_animation {
+@keyframes menu_animation1280 {
     0% {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
     100% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes menu_animation1250 {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
