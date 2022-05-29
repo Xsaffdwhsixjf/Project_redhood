@@ -1,82 +1,9 @@
-@charset "UTF-8";
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Sans TC', sans-serif;
-  background: url(../img/transp/水路交通背景.jpg) no-repeat;
-  background-size: cover;
+  background-image: url(../img/transp/bg-transportion.jpg);
 }
 
-ul,
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-nav .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  max-width: calc(1600px + 10%);
-  width: 90%;
-  padding: 0;
-  margin: 10px 10%;
-}
-
-nav .container .navLogo {
-  position: absolute;
-  top: 40px;
-  left: 20px;
-  width: 160px;
-  opacity: 0.7;
-}
-
-nav .container .nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-}
-
-nav .container .nav ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 15px;
-  margin-right: 5px;
-}
-
-nav .container .nav ul li .icon {
-  margin: 15px;
-  opacity: 0.9;
-}
-
-nav .container .nav ul li .icon i {
-  font-size: 18px;
-}
-
-nav .container .nav ul li a {
-  letter-spacing: .5px;
-  font-size: 18px;
-}
-
-nav .container .nav ul li .theme {
-  font-size: 18px;
-  text-align: center;
-  color: #02171C;
-  opacity: 0.9;
+#wholeArticle {
+  margin-top: 200px;
 }
 
 section {
@@ -157,14 +84,20 @@ section .titleBox {
 }
 
 @media screen and (max-width: 866px) {
-  section {
+  #wholeArticle {
+    margin-top: 160px;
+  }
+  #wholeArticle section {
     line-height: 50px;
     max-width: 80%;
   }
-  section .midBox {
+  #wholeArticle section .titleBox {
+    font-size: 26px;
+  }
+  #wholeArticle section .midBox {
     display: none;
   }
-  .oilstop {
+  #wholeArticle .oilstop {
     width: 100%;
     padding: 50px;
     border-radius: 50px;
