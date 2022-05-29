@@ -1,3 +1,10 @@
+html,
+html *,
+body,
+body * {
+  cursor: none;
+}
+
 .cursor-dot,
 .cursor-dot-outline {
   pointer-events: none;
