@@ -66,8 +66,8 @@ a {
   width: 90px;
   height: 90px;
   left: 15%;
-  -webkit-animation-duration: 25s;
-          animation-duration: 25s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
 }
 
 .bubble li:nth-child(2) {
@@ -90,8 +90,8 @@ a {
   width: 85px;
   height: 85px;
   left: 80%;
-  -webkit-animation-duration: 20s;
-          animation-duration: 20s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
 }
 
 .bubble li:nth-child(5) {
@@ -108,8 +108,8 @@ a {
   width: 85px;
   height: 85px;
   left: 45%;
-  -webkit-animation-duration: 13s;
-          animation-duration: 13s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
 .bubble li:nth-child(7) {
@@ -136,8 +136,8 @@ a {
   left: 63%;
   -webkit-animation-duration: 28s;
           animation-duration: 28s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .bubble li:nth-child(10) {
