@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/NavRwd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>NavBar 離線區</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img id="navLogo" src="../img/nav/Logo.png" alt="小琉球Logo">
+            </a>
+
+            <!-- Navbar -->
+            <div class="nav">
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div class="hambar"></div>
+                    </div>
+                    <div class="menu">
+                        <div class="inner-layer">
+                            <div class="through-layer">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="theme">最新消息 <br> News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="theme">水陸交通 <br> Transportation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="theme">夢入佳境 <br> Accommodation</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <button class="dropbtn btn1">吃飽喝足<br>
+                                            Local Cuisine
+                                            <i class="fa-solid fa-angles-down"></i>
+                                        </button>
+                                        <div class="dropdown-content list1 food" id="myDropdown">
+                                            <a href="#" class="dropLink">特色小食<br>
+                                                Taiwan Snack</a>
+                                            <a href="#" class="dropLink">特色小店<br>
+                                                Feature store
+                                            </a>
+                                    </li>
+                                    <div>
+
+                                    </div>
+
+                                    <li class="dropdown">
+                                        <button class="dropbtn btn2 ">海闊天空<br>
+                                            Attraction
+                                            <i class="fa-solid fa-angles-down"></i>
+                                        </button>
+                                        <div class="dropdown-content list2 " id="myDropdown">
+                                            <a href="#" class="dropLink">水上玩樂<br>
+                                                Water Sports
+                                            </a>
+                                            <a href="#" class="dropLink">天然佳景<br>
+                                                Natural Landscape
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="subject">
+        <span class="text__animated" data-text="word w1">吃</span>
+        <span class="text__animated" data-text="word w2">飽</span>
+        <span class="text__animated" data-text="word w3">喝</span>
+        <span class="text__animated" data-text="word w4">足</span>
+        <span class="text__animated" data-text="word w5">Water</span>
+        <span class="text__animated" data-text="word w6">Sports</span>
+
+    </div>
+
+    <script>
+
+        const btn1 = document.querySelector('.btn1')
+        const btn2 = document.querySelector('.btn2')
+        const list1 = document.querySelector('.list1')
+        const list2 = document.querySelector('.list2')
+        btn1.addEventListener('click', () => {
+            list1.classList.toggle('show')
+        })
+        btn2.addEventListener('click', () => {
+            list2.classList.toggle('show')
+        })
+
+    </script>
+</body>
+
+</html>
