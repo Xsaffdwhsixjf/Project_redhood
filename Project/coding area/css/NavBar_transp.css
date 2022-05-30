@@ -230,6 +230,8 @@ nav .container .nav .menu-wrap ul .dropdown:hover {
           animation: shine 2s infinite;
   -webkit-text-decoration: line-through double #78b2c4 .5px;
           text-decoration: line-through double #78b2c4 .5px;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropdown-content {
@@ -251,13 +253,8 @@ nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list1 a {
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list1 a:hover {
-  -webkit-mask-image: initial;
-          mask-image: initial;
-  -webkit-mask-size: initial;
-          mask-size: initial;
-  -webkit-animation: initial;
-          animation: initial;
-  text-decoration: initial;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 {
@@ -272,13 +269,13 @@ nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 a {
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 a:hover {
-  -webkit-mask-image: initial;
-          mask-image: initial;
-  -webkit-mask-size: initial;
-          mask-size: initial;
-  -webkit-animation: initial;
-          animation: initial;
-  text-decoration: initial;
+  -webkit-mask-image: unset;
+          mask-image: unset;
+  -webkit-mask-size: unset;
+          mask-size: unset;
+  -webkit-animation: unset;
+          animation: unset;
+  text-decoration: unset;
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropdown-content a {
@@ -339,8 +336,8 @@ nav .container .nav .menu-wrap .theme {
 #subject {
   font-size: 36px;
   position: absolute;
-  top: 15%;
-  left: 10%;
+  top: 104px;
+  left: 82px;
   letter-spacing: 3px;
   font-weight: 100;
   z-index: 3;
