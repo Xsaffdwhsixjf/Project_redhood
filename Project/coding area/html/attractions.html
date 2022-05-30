@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="../css/swiper_lightbox.css">
     <link rel="stylesheet" href="../css/attractions.css">
-    <!-- <link rel="stylesheet" href="../css/attractions_example.css"> -->
     <title>小琉球觀光旅遊網</title>
 </head>
 
@@ -60,10 +62,10 @@
             </div>
         </div>
     </nav>
-    <section>
+    <section class="lightbox_with_grid">
         <div class="map"><iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29522.96841215144!2d120.367593149707!3d22.339614230084617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471ef8bf661cf49%3A0xf7a35e64cf5abcbe!2zOTI55bGP5p2x57ij55CJ55CD6YSJ!5e0!3m2!1szh-TW!2stw!4v1653275766721!5m2!1szh-TW!2stw"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         <div id="gallery">
             <div><img src="../img/attraction/attractions/Black_Devil_Cave.jpg" /><a href="#lightbox-1"></a></div>
@@ -129,6 +131,47 @@
         </div>
 
     </section>
+    <section class="cb-image-grid cb-image-grid--type-one">
+        <div class="cb-image-grid__container padding-top-md padding-bottom-md" style="padding:0;margin:0;">
+            <div class="cb-image-grid__images-container">
+                <div class="cb-image-grid__image" lightbox-toggle>
+                    <img src="../img/attraction/attractions/Black_Devil_Cave.jpg" loading="lazy">
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/Lobster_Cave.webp" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/sea1.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/sea2.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/sea_urchin.jfif" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/Sika_deer1.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/Sika_deer2.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/snorkeling.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/sunset.jpg" loading="lazy">
+                    </div>
+                    <div class="cb-image-grid__image" style="display:none" lightbox-toggle>
+                        <img src="../img/attraction/attractions/White_lighthouse.jfif" loading="lazy">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="map_bottom"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29522.96841215144!2d120.367593149707!3d22.339614230084617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471ef8bf661cf49%3A0xf7a35e64cf5abcbe!2zOTI55bGP5p2x57ij55CJ55CD6YSJ!5e0!3m2!1szh-TW!2stw!4v1653275766721!5m2!1szh-TW!2stw"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script src="../js/swiper_lightbox.js"></script>
 </body>
 
 </html>
