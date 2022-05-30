@@ -28,7 +28,7 @@ nav {
         justify-content: space-between;
         position: fixed;
         top: 0;
-        left:0;
+        left: 0;
         margin: 0 auto;
         z-index: 3;
         background-color: #82aeb8;
@@ -200,6 +200,7 @@ nav {
                             mask-size: 200%;
                             animation: shine 2s infinite;
                             text-decoration: line-through double #78b2c4 .5px;
+                            animation-play-state: paused;
                         }
 
                         .dropdown-content {
@@ -220,10 +221,7 @@ nav {
 
                                     &:hover {
 
-                                        mask-image: initial;
-                                        mask-size: initial;
-                                        animation: initial;
-                                        text-decoration: initial;
+                                        animation-play-state: paused;
                                     }
                                 }
                             }
@@ -238,10 +236,11 @@ nav {
                                     padding: 5px;
 
                                     &:hover {
-                                        mask-image: initial;
-                                        mask-size: initial;
-                                        animation: initial;
-                                        text-decoration: initial;
+
+                                        mask-image: unset;
+                                        mask-size: unset;
+                                        animation: unset;
+                                        text-decoration: unset;
                                     }
                                 }
                             }
@@ -307,8 +306,8 @@ nav {
 #subject {
     font-size: 36px;
     position: absolute;
-    top: 15%;
-    left: 10%;
+    top: 104px;
+    left: 82px;
     letter-spacing: 3px;
     font-weight: 100;
     z-index: 3;
