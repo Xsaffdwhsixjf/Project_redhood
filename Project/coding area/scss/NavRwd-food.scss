@@ -174,20 +174,29 @@ nav {
                         margin: 10px;
                         opacity: 0.9;
                         font-size: 30px;
+
+                        a {
+                            // / 下拉選單字體顏色(清單)
+                            color: rgb(27, 51, 51);
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            font-size: 18px;
+                        }
                     }
 
                     .dropdown {
                         float: left;
-                        // overflow: hidden;
                         font-size: 30px;
 
 
                         .dropbtn {
-                            font-size: 16px;
+                            font-size: 18px;
+                            letter-spacing: 2px;
                             border: none;
                             outline: none;
                             // 下拉選單字體顏色(btn)
-                            color: whitesmoke;
+                            color: rgb(27, 51, 51);
                             background-color: transparent;
                             font-family: inherit;
                             margin: 0;
@@ -205,16 +214,14 @@ nav {
                     .dropdown-content {
                         display: none;
                         min-width: 160px;
-                        // z-index: 1;
 
                         &.list1 {
-                            animation: none;
+                            animation: unset;
                             position: absolute;
                             top: 90%;
-                            right: 15%;
+                            right: 18%;
 
                             a {
-                                font-size: 16px;
                                 padding:
                                     5px;
 
@@ -228,43 +235,32 @@ nav {
                                 }
                             }
                         }
-                    }
 
-                    &.list2 {
-                        position: absolute;
-                        top: 90%;
-                        left: 79%;
 
-                        a {
-                            font-size: 16px;
-                            padding: 5px;
+                        &.list2 {
+                            position: absolute;
+                            top: 90%;
+                            left: 83%;
 
-                            &:hover {
-                                mask-image: unset;
-                                mask-size: unset;
-                                animation: unset;
-                                text-decoration: unset;
+                            a {
+                                padding: 5px;
+
+                                &:hover {
+                                    mask-image: unset;
+                                    mask-size: unset;
+                                    animation: unset;
+                                    text-decoration: unset;
+                                }
                             }
                         }
+                        &.show {
+                            display: block;
+                        }
                     }
-
-                    a {
-                        // / 下拉選單字體顏色(清單)
-                        color: whitesmoke;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        display: block;
-                        font-size: 18px;
-                    }
-
-                    &.show {
-                        display: block;
-                    }
+                    
                 }
             }
-
         }
-
         a {
             letter-spacing: .5px;
 
@@ -293,7 +289,7 @@ nav {
         .theme {
             font-size: 1rem;
             // navbar字體大小
-            color: whitesmoke;
+            color: rgb(27, 51, 51);
             // navbar字體顏色
             text-align: center;
             opacity: 0.9;
@@ -314,7 +310,7 @@ nav {
     z-index: 3;
 
     span {
-        color:#913119;
+        color: #ca9997;
         animation-duration: 0.8s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -370,7 +366,7 @@ nav {
 
         100% {
             font-weight: 500;
-            color:#78b2c4;
+            color: #78b2c4;
         }
 
 
