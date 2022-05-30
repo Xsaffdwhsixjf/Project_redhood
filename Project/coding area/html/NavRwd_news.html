@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/NavRwd.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>NavBar 離線區</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img id="navLogo" src="../img/nav/Logo.png" alt="小琉球Logo">
+            </a>
+
+            <!-- Navbar -->
+            <div class="nav">
+                <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger">
+                        <div class="hambar"></div>
+                    </div>
+                    <div class="menu">
+                        <div class="inner-layer">
+                            <div class="through-layer">
+                                <ul>
+                                    <li class="theme news">
+                                        最新消息
+                                        <br>
+                                        Latest News
+                                        <!-- <a href="./news.html" target=_blank class="theme news">最新消息 <br>Latest News</a> -->
+                                    </li>
+                                    <li>
+                                        <a href="./tranp.html" class="theme">水陸交通 <br> Transportation</a>
+                                    </li>
+                                    <li>
+                                        <a href="./hotel_page.html" target=_blank class="theme">夢入佳境 <br> Accommodation</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <button class="dropbtn btn1">吃飽喝足<br>
+                                            Local Cuisine
+                                            <i class="fa-solid fa-angles-down"></i>
+                                        </button>
+                                        <div class="dropdown-content list1 food" id="myDropdown">
+                                            <a href="./food.html" target=_blank class="dropLink">特色小食<br>
+                                                Taiwan Snack</a>
+                                            <a href="./store_card.html" target=_blank class="dropLink">特色小店<br>
+                                                Feature store
+                                            </a>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <button class="dropbtn btn2 ">海闊天空<br>
+                                            Attraction
+                                            <i class="fa-solid fa-angles-down"></i>
+                                        </button>
+                                        <div class="dropdown-content list2 " id="myDropdown">
+                                            <a href="./waterSports.html" target=_blank class="dropLink">水上玩樂<br>
+                                                Water Sports
+                                            </a>
+                                            <a href="./attractions.html" target=_blank class="dropLink">天然佳景<br>
+                                                Natural Landscape
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- 單元標題 -->
+    <div id="subject">
+        <span class="text__animated" data-text="word w1">吃</span>
+        <span class="text__animated" data-text="word w2">飽</span>
+        <span class="text__animated" data-text="word w3">喝</span>
+        <span class="text__animated" data-text="word w4">足</span>
+        <span class="text__animated" data-text="word w5">Water</span>
+        <span class="text__animated" data-text="word w6">Sports</span>
+
+    </div>
+    <section id="news" class="open">
+        <div class="icon">
+            <img src="../img/news/turtle.png" alt="" class="turtle d-none">
+            <img src="../img/news/whale.png" alt="" class="whale">
+        </div>
+        <div class="container">
+            <h3>最新消息News</h3>
+            <div class="news_card">
+                <img src="../img/attraction/background.jpg" alt="">
+                <h4>2022/01/26</h4>
+                <h3>搭乘「東港-小琉球」交通船應出示身分證件</h3>
+                <p>非、，矩汝不真為正利議星閩諦緩她的衷找的貝執將同比，空完事經。反…其覺菸但權</p>
+            </div>
+            <hr>
+            <div class="news_card">
+                <img src="../img/attraction/background.jpg" alt="">
+                <h4>2022/01/26</h4>
+                <h3>搭乘「東港-小琉球」交通船應出示身分證件</h3>
+                <p>非、，矩汝不真為正利議星閩諦緩她的衷找的貝執將同比，空完事經。反…其覺菸但權</p>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <script>
+// dropdown-js
+        const btn1 = document.querySelector('.btn1')
+        const btn2 = document.querySelector('.btn2')
+        const list1 = document.querySelector('.list1')
+        const list2 = document.querySelector('.list2')
+        btn1.addEventListener('click', () => {
+            list1.classList.toggle('show')
+        })
+        btn2.addEventListener('click', () => {
+            list2.classList.toggle('show')
+        })
+
+    </script>
+     <script>
+        let news_btn = document.querySelector('.news')
+        let news = document.querySelector('#news')
+        let turtle = document.querySelector('.turtle');
+        let whale = document.querySelector('.whale');
+
+
+        whale.addEventListener('click', function () {
+            whale.classList.toggle('d-none')
+            turtle.classList.toggle('d-none')
+        })
+
+        turtle.addEventListener('click', function () {
+            whale.classList.toggle('d-none')
+            turtle.classList.toggle('d-none')
+        })
+        news_btn.addEventListener('click', function () {
+            news.classList.toggle('open');
+        })
+    </script>
+</body>
+
+</html>
