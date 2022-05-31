@@ -35,7 +35,7 @@ nav {
             position: absolute;
             top: 40px;
             left: 40px;
-            width: 150px;
+            width: 105px;
             opacity: 0.7;
             margin: 0 30px;
 
@@ -174,6 +174,15 @@ nav {
                         margin: 10px;
                         opacity: 0.9;
                         font-size: 30px;
+
+                        a {
+                            // / 下拉選單字體顏色(清單)
+                            color: grey;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            font-size: 18px;
+                        }
                     }
 
                     .dropdown {
@@ -187,18 +196,19 @@ nav {
                             border: none;
                             outline: none;
                             // 下拉選單字體顏色(btn)
-                            color: whitesmoke;
+                            color: grey;
                             background-color: transparent;
                             font-family: inherit;
                             margin: 0;
-                        }
 
-                        &:hover {
-                            mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
-                            mask-size: 200%;
-                            animation: shine 2s infinite;
-                            text-decoration: line-through double #78b2c4 .5px;
-                            animation-play-state: paused;
+
+                            &:hover {
+                                mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+                                mask-size: 200%;
+                                animation: shine 2s infinite;
+                                text-decoration: line-through double #78b2c4 .5px;
+                                animation-play-state: paused;
+                            }
                         }
                     }
 
@@ -208,57 +218,22 @@ nav {
                         // z-index: 1;
 
                         &.list1 {
-                            animation: none;
                             position: absolute;
                             top: 90%;
                             right: 15%;
-
-                            a {
-                                font-size: 16px;
-                                padding:
-                                    5px;
-
-                                &:hover {
-
-                                    mask-image: unset;
-                                    mask-size: unset;
-                                    animation: unset;
-                                    text-decoration: unset;
-                                    animation-play-state: paused;
-                                }
-                            }
-                        }
-                    }
-
-                    &.list2 {
-                        position: absolute;
-                        top: 90%;
-                        left: 79%;
-
-                        a {
-                            font-size: 16px;
                             padding: 5px;
-
-                            &:hover {
-                                mask-image: unset;
-                                mask-size: unset;
-                                animation: unset;
-                                text-decoration: unset;
-                            }
                         }
-                    }
 
-                    a {
-                        // / 下拉選單字體顏色(清單)
-                        color: whitesmoke;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        display: block;
-                        font-size: 18px;
-                    }
+                        &.list2 {
+                            position: absolute;
+                            top: 90%;
+                            left: 84%;
+                            padding: 5px;
+                        }
 
-                    &.show {
-                        display: block;
+                        &.show {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -293,7 +268,7 @@ nav {
         .theme {
             font-size: 1rem;
             // navbar字體大小
-            color: whitesmoke;
+            color: grey;
             // navbar字體顏色
             text-align: center;
             opacity: 0.9;
@@ -305,16 +280,15 @@ nav {
 
 // 單元標題
 #subject {
-    font-size: 36px;
+    font-size: 28px;
     position: absolute;
-    top: 100px;
+    top: 85px;
     left: 80px;
-    letter-spacing: 9px;
-    font-weight: 100;
+    letter-spacing: 5px;
     z-index: 3;
 
     span {
-        color:#913119;
+        color: rgb(86, 98, 98);
         animation-duration: 0.8s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -370,7 +344,7 @@ nav {
 
         100% {
             font-weight: 500;
-            color:#78b2c4;
+            color: #10c3fa;
         }
 
 
