@@ -1,6 +1,9 @@
 .dataTables_wrapper {
     label {
         color: rgba(255, 255, 255, 0.7);
+        @media (max-width:1250px) {
+            margin-right: 25px;
+        }
     }
 
     .dataTables_filter {
@@ -53,16 +56,26 @@ body {
     }
 }
 
-section {
+#data {
     padding: 0% 3%;
+    margin-top: 6%;
 
-    @media (max-width:600px) {
+    @media (max-width:1250px) {
         padding: 0;
+        margin-top: 10%;
+    }
+    @media (max-width:657px) {
+        padding: 0;
+        margin-top: 16%;
+    }
+
+    @media (max-width:480px) {
+        width: calc(100vw - 17px);
         ;
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 1em;
         float: left;
     }
 
@@ -110,14 +123,19 @@ section {
 
                         @media (max-width:1250px) {
                             width: 70%;
+                            height: calc(80vh / 3);
                             margin: auto;
                         }
 
-                        @media (max-width:786px) {
+                        @media (max-width:960px) {
                             width: 85%;
                         }
 
-                        @media (max-width:600px) {
+                        @media (max-width:786px) {
+                            width: 95%;
+                        }
+
+                        @media (max-width:657px) {
                             width: 100%;
                         }
 
@@ -125,8 +143,11 @@ section {
                             height: 20vh;
                             width: 100%;
                             display: flex;
-                            margin-bottom: 10px;
                             background-color: transparent;
+
+                            @media (max-width:1250px) {
+                                height: 100%;
+                            }
 
                             .img {
                                 width: 40%;
@@ -153,6 +174,15 @@ section {
                                 row-gap: 7px;
                                 position: relative;
 
+                                @media (max-width:657px) {
+                                    font-size: 19px;
+                                }
+
+                                @media (max-width:480px) {
+                                    font-size: 15px;
+                                    margin: 0;
+                                }
+
                                 a {
                                     // position: absolute;
                                     // top: 0%;
@@ -163,6 +193,7 @@ section {
                                 h1,
                                 p,
                                 a {
+                                    margin: 0;
                                     text-decoration: unset;
                                     color: black;
                                     letter-spacing: .25em;
@@ -185,6 +216,10 @@ section {
 
     img {
         height: 100px;
+z-index: 1000000000000;
+        @media (max-width:480px) {
+            height: 70px;
+        }
     }
 }
 

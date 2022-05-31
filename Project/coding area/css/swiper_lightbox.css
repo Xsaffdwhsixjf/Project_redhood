@@ -3,13 +3,13 @@
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-@media (min-width: 755px) {
+@media (min-width: 786px) {
   .cb-image-grid {
     display: none;
   }
 }
 
-@media (max-width: 755px) {
+@media (max-width: 786px) {
   .cb-image-grid {
     display: block;
     -webkit-column-gap: 0;

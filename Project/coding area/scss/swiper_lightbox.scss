@@ -1,11 +1,11 @@
 .cb-image-grid {
   $cb: &;
 
-  @media (min-width:755px) {
+  @media (min-width:786px) {
     display: none;
   }
 
-  @media (max-width:755px) {
+  @media (max-width:786px) {
     display: block;
     column-gap: 0;
     height: 50vh;

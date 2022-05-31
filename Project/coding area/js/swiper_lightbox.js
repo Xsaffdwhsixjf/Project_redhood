@@ -8,7 +8,7 @@ const destroySwiper = (swiper, timeout) => {
         swiper.destroy();
     }, timeout);
 };
-
+// let   caption = ("<p class='caption'>56755</p>");
 const createLightboxSkeleton = () => {
     // Create skeleton for lightbox
     const lightbox = document.createElement("div");
@@ -74,6 +74,7 @@ if (initLightbox) {
                 imageContainer.classList.add("c-lightbox__image");
                 // Append images to the slides, then slides to swiper wrapper
                 imageContainer.appendChild(image);
+                // imageContainer.append(caption);
                 slide.appendChild(imageContainer);
                 globals.swiperWrapperRef.appendChild(slide);
             });
