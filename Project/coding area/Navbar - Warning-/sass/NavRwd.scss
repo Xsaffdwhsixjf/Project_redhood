@@ -1,4 +1,5 @@
-/* Navbar離線區-Navbar範本資料夾 */
+// navbar-coding area (disconnected
+
 * {
     box-sizing: border-box;
 }
@@ -27,15 +28,14 @@ nav {
         justify-content: space-between;
         position: fixed;
         top: 0;
-        max-width: 100%;
-        width: 100vw;
         margin: 0 auto;
+        z-index: 3;
 
         #navLogo {
             position: absolute;
             top: 40px;
             left: 40px;
-            width: 150px;
+            width: 105px;
             opacity: 0.7;
             margin: 0 30px;
 
@@ -46,10 +46,11 @@ nav {
                 display: flex;
                 padding: 0 5%;
 
+                // checkbox
                 .toggler {
-                    position: absolute;
+                    position: fixed;
                     top: 20px;
-                    right: 25px;
+                    right: 9%;
                     z-index: 2;
                     cursor: pointer;
                     width: 50px;
@@ -90,13 +91,10 @@ nav {
 
                 }
 
-
-
-
                 .hamburger {
-                    position: absolute;
-                    top: 5%;
-                    right: 5%;
+                    position: fixed;
+                    top: 30px;
+                    left: 81%;
                     z-index: 1;
                     width: 60px;
                     height: 60px;
@@ -176,6 +174,15 @@ nav {
                         margin: 10px;
                         opacity: 0.9;
                         font-size: 30px;
+
+                        a {
+                            // / 下拉選單字體顏色(清單)
+                            color: grey;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            font-size: 18px;
+                        }
                     }
 
                     .dropdown {
@@ -185,126 +192,105 @@ nav {
 
 
                         .dropbtn {
-                            font-size: 16px;
+                            font-size: 18px;
+                            letter-spacing: 2px;
+                            opacity: 0.9;
                             border: none;
                             outline: none;
-                            color: black;
+                            // 下拉選單字體顏色(btn)
+                            color: grey;
                             background-color: transparent;
                             font-family: inherit;
                             margin: 0;
-                        }
 
-                        &:hover {
-                            mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
-                            mask-size: 200%;
-                            animation: shine 2s infinite;
-                            text-decoration: line-through double #78b2c4 .5px;
-                        }
 
-                        .dropdown-content {
-                            display: none;
-                            min-width: 160px;
-                            // z-index: 1;
-
-                            &.list1 {
-                                position: absolute;
-                                top: 90%;
-                                right: 15%;
-
-                                a {
-                                    font-size: 16px;
-                                    padding:
-                                        5px;
-                                }
-
-                            }
-
-                            &.list2 {
-                                position: absolute;
-                                top: 90%;
-                                left: 79%;
-
-                                a {
-                                    font-size: 16px;
-                                    padding:
-                                        5px;
-                                }
-                            }
-
-                            a {
-                                float: none;
-                                color: black;
-                                padding: 12px 16px;
-                                text-decoration: none;
-                                display: block;
-                                font-size: 18px;
-
-                                &.droplink {
-                                    &:hover {
-                                        mask-image: none;
-                                        animation: none;
-                                    }
-                                }
-                            }
-
-                            &.show {
-                                display: block;
+                            &:hover {
+                                mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+                                mask-size: 200%;
+                                animation: shine 2s infinite;
+                                text-decoration: line-through double #78b2c4 .5px;
+                                animation-play-state: paused;
                             }
                         }
                     }
 
-                }
+                    .dropdown-content {
+                        display: none;
+                        min-width: 160px;
+                        // z-index: 1;
 
-                a {
-                    letter-spacing: .5px;
-
-                    &:hover {
-                        mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
-                        mask-size: 200%;
-                        animation: shine 2s infinite;
-                        text-decoration: line-through double #78b2c4 .5px;
-
-                    }
-
-                    @keyframes shine {
-                        from {
-                            -webkit-mask-position: 150%;
+                        &.list1 {
+                            position: absolute;
+                            top: 90%;
+                            right: 15%;
+                            padding: 5px;
                         }
 
-                        to {
-                            -webkit-mask-position: -50%;
+                        &.list2 {
+                            position: absolute;
+                            top: 90%;
+                            left: 84%;
+                            padding: 5px;
+                        }
 
+                        &.show {
+                            display: block;
                         }
                     }
-                }
-
-
-
-                .theme {
-                    font-size: 1rem;
-                    // navbar字體大小
-                    color: black;
-                    // navbar字體顏色
-                    text-align: center;
-                    opacity: 0.9;
-                    letter-spacing: 2px;
-                    font-weight: lighter;
                 }
             }
+
+        }
+
+        a {
+            letter-spacing: .5px;
+
+            &:hover {
+                mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+                mask-size: 200%;
+                animation: shine 2s infinite;
+                text-decoration: line-through double #78b2c4 .5px;
+
+            }
+
+            @keyframes shine {
+                from {
+                    -webkit-mask-position: 150%;
+                }
+
+                to {
+                    -webkit-mask-position: -50%;
+
+                }
+            }
+        }
+
+
+
+        .theme {
+            font-size: 1rem;
+            // navbar字體大小
+            color: grey;
+            // navbar字體顏色
+            text-align: center;
+            opacity: 0.9;
+            letter-spacing: 2px;
+            font-weight: lighter;
         }
     }
 }
 
-
+// 單元標題
 #subject {
-    font-size: 36px;
-    margin: 82px 216px;
-    padding: 10px;
-    letter-spacing: 3px;
-    font-weight: 100;
+    font-size: 28px;
+    position: absolute;
+    top: 85px;
+    left: 80px;
+    letter-spacing: 5px;
+    z-index: 3;
 
     span {
-        color: lightsteelblue;
+        color: rgb(86, 98, 98);
         animation-duration: 0.8s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -360,7 +346,7 @@ nav {
 
         100% {
             font-weight: 500;
-            color: #69B1C2
+            color: #10c3fa;
         }
 
 
@@ -377,7 +363,7 @@ nav {
             padding: 0;
 
             #navLogo {
-                top: 5%;
+                top: 40px;
                 left: 5%;
                 width: 100px;
 
@@ -393,15 +379,18 @@ nav {
 
                     .menu {
                         margin: 0;
+                        position: absolute;
+                        z-index: -1;
+                        top: 0px;
+                        left: 0px;
                         visibility: hidden;
                         height: 100vh;
                         background-color: #62939e;
-                        opacity: 0.8;
+                        opacity: 0.95;
 
                         .inner-layer {
                             border-radius: 50%;
                             width: 200vw;
-                            height: 200vw;
                             display: flex;
                             // flex: none;
                             align-items: center;
@@ -466,20 +455,9 @@ nav {
         }
     }
 
+    // 單元標題
     #subject {
         font-size: 22px;
-        margin: 10% 10% 5%;
-        padding: 5px;
-        letter-spacing: 3px;
-    }
-}
-
-@media screen and (max-width: 690px) {
-
-    #subject {
-        font-size: 22px;
-        margin: 15% 10% 5%;
-        padding: 5px;
         letter-spacing: 3px;
     }
 }

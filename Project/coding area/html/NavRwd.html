@@ -10,7 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <title>NavBar 離線區</title>
+    <!-- Title icon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!-- 最新消息 -->
+    <link rel="stylesheet" href="../css/news.css">
+
+
+    <title>NavBar(包括最新消息)</title>
 </head>
 
 <body>
@@ -32,14 +38,15 @@
                         <div class="inner-layer">
                             <div class="through-layer">
                                 <ul>
-                                    <li>
-                                        <a href="./news.html" target=_blank class="theme">最新消息 <br>Latest News</a>
+                                    <li class="theme">
+                                        <a href="#" class="theme news">最新消息 <br>Latest News</a>
                                     </li>
                                     <li>
                                         <a href="./tranp.html" class="theme">水陸交通 <br> Transportation</a>
                                     </li>
                                     <li>
-                                        <a href="./hotel_page.html" target=_blank class="theme">夢入佳境 <br> Accommodation</a>
+                                        <a href="./hotel_page.html" target=_blank class="theme">夢入佳境 <br>
+                                            Accommodation</a>
                                     </li>
                                     <li class="dropdown">
                                         <button class="dropbtn btn1">吃飽喝足<br>
@@ -75,9 +82,30 @@
                 </div>
             </div>
         </div>
+        <!-- 最新消息區塊 -->
+        <section id="news" class="">
+            <!-- 開啟/關閉icon -->
+            <div class="icon">
+                <img src="../img/turtle.png" alt="" class="turtle d-none">
+                <img src="../img/whale.png" alt="" class="whale">
+            </div>
+            <div class="content">
+                <h1>最新消息News</h1>
+                <div class="news_card">
+                    <img src="../img/wave.jpg" alt="">
+                    <h4>2022/01/26</h4>
+                    <h3>屏東縣琉球鄉 潮汐時刻查詢</h3>
+                    <p><a href="http://www.cwb.gov.tw/V7/forecast/fishery/tide_1.htm">潮汐時刻查詢連結</a><br>
+                        1. 進入網頁後，請點選左側地圖「高雄枋寮沿海」，找到「屏東縣 琉球」，即可知曉當天潮汐時刻。<br>
+                        2.欲知未來30天潮汐時刻，請點選「屏東縣 琉球」下方「未來30天」，即可知曉後續30天潮汐時刻。
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </section>
     </nav>
 
-<!-- 單元標題 -->
+    <!-- 單元標題 -->
     <div id="subject">
         <span class="text__animated" data-text="word w1">吃</span>
         <span class="text__animated" data-text="word w2">飽</span>
@@ -88,8 +116,8 @@
 
     </div>
 
+    <!-- Navbar下拉清單js -->
     <script>
-// dropdown-js
         const btn1 = document.querySelector('.btn1')
         const btn2 = document.querySelector('.btn2')
         const list1 = document.querySelector('.list1')
@@ -101,7 +129,30 @@
             list2.classList.toggle('show')
         })
 
+        // 最新消息橋段
+        let news_btn = document.querySelector('.news')
+        let news = document.querySelector('#news')
+        let turtle = document.querySelector('.turtle');
+        let whale = document.querySelector('.whale');
+
+
+        whale.addEventListener('click', function () {
+            whale.classList.toggle('d-none');
+            turtle.classList.toggle('d-none');
+            news.classList.toggle('open');
+        })
+
+        turtle.addEventListener('click', function () {
+            whale.classList.toggle('d-none');
+            turtle.classList.toggle('d-none');
+            news.classList.toggle('open');
+        })
+        news_btn.addEventListener('click', function () {
+            news.classList.toggle('open');
+            event.preventDefault();
+        })
     </script>
+
 </body>
 
 </html>
