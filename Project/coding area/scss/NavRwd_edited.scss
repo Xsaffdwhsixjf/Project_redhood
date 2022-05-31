@@ -404,6 +404,10 @@ nav {
 
                     .menu {
                         margin: 0;
+                        position: absolute;
+                        z-index: -1;
+                        top: 0px;
+                        left: 0px;
                         visibility: hidden;
                         height: 100vh;
                         background-color: #62939e;
