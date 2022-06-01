@@ -232,6 +232,58 @@ a {
   }
 }
 
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+header .container #navLogo {
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+header .container .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+header .container .nav ul li .icon {
+  margin: 10px;
+  opacity: 0.9;
+}
+
+header .container .nav ul li .icon i {
+  font-size: 18px;
+  color: #FFF;
+}
+
+header .container .nav ul li .theme {
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: .5px;
+  color: #FFF;
+  opacity: 0.9;
+}
+
 section {
   position: relative;
   top: 15%;
@@ -520,6 +572,7 @@ section .container .swiper-button-next {
 section .container .swiper-button-next,
 section .container .swiper-button-prev:root {
   --swiper-navigation-size: 120px;
+  z-index: 0;
 }
 
 @media (min-width: 300px) and (max-width: 825px) {
@@ -527,13 +580,13 @@ section .container .swiper-button-prev:root {
   section .container .swiper-button-prev:root {
     top: 115%;
     right: 40%;
-    z-index: 0;
   }
 }
 
 section .container .swiper-button-prev,
 section .container .swiper-button-next:root {
   --swiper-navigation-size: 120px;
+  z-index: 0;
 }
 
 @media (min-width: 300px) and (max-width: 825px) {
@@ -541,7 +594,6 @@ section .container .swiper-button-next:root {
   section .container .swiper-button-next:root {
     top: 115%;
     left: 40%;
-    z-index: 0;
   }
 }
 /*# sourceMappingURL=store_card.css.map */

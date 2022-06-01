@@ -4,6 +4,7 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-image: url(../img/food/food_bg_1920x1080.png);
@@ -22,12 +23,63 @@ a {
   text-decoration: none;
 }
 
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+header .container #navLogo {
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  opacity: 0.7;
+}
+
+header .container .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+}
+
+header .container .nav ul li .icon {
+  margin: 10px;
+  opacity: 0.9;
+}
+
+header .container .nav ul li .icon i {
+  font-size: 18px;
+}
+
+header .container .nav ul li .theme {
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: .5px;
+  color: #02171C;
+  opacity: 0.9;
+}
+
 section {
   position: relative;
   max-width: calc(1600px + 10%);
   width: 100%;
   height: calc(100vh - 200px);
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 0 5%;
 }
 
@@ -1352,7 +1404,7 @@ section .food10 {
   height: 0%;
   width: 100%;
   position: fixed;
-  z-index: 3;
+  z-index: 16;
   top: 0;
   left: 0;
   background-color: rgba(5, 78, 103, 0.8);
