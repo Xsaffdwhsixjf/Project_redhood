@@ -256,7 +256,6 @@ body {
 
 .top_btn img {
   height: 100px;
-  z-index: 1000000000000;
 }
 
 @media (max-width: 480px) {
