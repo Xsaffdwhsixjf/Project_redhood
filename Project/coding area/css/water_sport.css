@@ -1,0 +1,707 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: url(../img/watersport/water_sport_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body ul,
+body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 200px);
+  /*z-index defult value=1*/
+  z-index: 0;
+  /*upgrade gpu rendering*/
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  /* glow of the bubbles*/
+}
+
+body .bubble li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  /*make bubble on page bottom*/
+  top: 58%;
+  -webkit-animation: bubble-ani 1s ease-out infinite;
+          animation: bubble-ani 1s ease-out infinite;
+  border-radius: 100%;
+}
+
+body .bubble li:before {
+  position: absolute;
+  left: 20%;
+  top: 21%;
+  width: 25%;
+  content: '';
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  height: 25%;
+  border-radius: 100%;
+}
+
+body .bubble li:nth-child(1) {
+  width: 90px;
+  height: 90px;
+  left: 15%;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+}
+
+body .bubble li:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  left: 20%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+body .bubble li:nth-child(3) {
+  width: 130px;
+  height: 130px;
+  left: 30%;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+
+body .bubble li:nth-child(4) {
+  width: 85px;
+  height: 85px;
+  left: 80%;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+}
+
+body .bubble li:nth-child(5) {
+  width: 130px;
+  height: 130px;
+  left: 50%;
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
+}
+
+body .bubble li:nth-child(6) {
+  width: 85px;
+  height: 85px;
+  left: 45%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+body .bubble li:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 80%;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+
+body .bubble li:nth-child(8) {
+  width: 120px;
+  height: 120px;
+  left: 55%;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+body .bubble li:nth-child(9) {
+  width: 90px;
+  height: 90px;
+  left: 63%;
+  -webkit-animation-duration: 28s;
+          animation-duration: 28s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+body .bubble li:nth-child(10) {
+  width: 75px;
+  height: 75px;
+  left: 70%;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+body .bubble li:nth-child(13) {
+  width: 130px;
+  height: 130px;
+  left: 25%;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+body .bubble li:nth-child(14) {
+  width: 130px;
+  height: 130px;
+  left: 43%;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+body .bubble li:nth-child(15) {
+  width: 85px;
+  height: 85px;
+  left: 45%;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-delay: 25s;
+          animation-delay: 25s;
+}
+
+@-webkit-keyframes bubble-ani {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1080px);
+    transform: translateY(-1080px);
+  }
+}
+
+@keyframes bubble-ani {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1080px);
+    transform: translateY(-1080px);
+  }
+}
+
+body section {
+  position: relative;
+  top: 17%;
+  max-width: calc(1600px + 10%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+@media (max-width: 450px) {
+  body section {
+    top: 15%;
+  }
+}
+
+body section .wrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: -4% auto;
+  max-width: 1200px;
+  max-height: 1200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1670px) {
+  body section .wrapper {
+    margin: -4% 8%;
+  }
+}
+
+@media (max-width: 1600px) {
+  body section .wrapper {
+    margin: -4% 5%;
+  }
+}
+
+@media (max-width: 1550px) {
+  body section .wrapper {
+    margin: -4% 3%;
+  }
+}
+
+@media (max-width: 1500px) {
+  body section .wrapper {
+    margin: -4% 2%;
+  }
+}
+
+@media (max-width: 1450px) {
+  body section .wrapper {
+    margin: -4% 1%;
+  }
+}
+
+@media (max-width: 1430px) {
+  body section .wrapper {
+    display: none;
+  }
+}
+
+body section .effect {
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+body section .effect:nth-child(7n + 1) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+body section .effect:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+body section .diamond {
+  width: 300px;
+  height: 300px;
+  background: rgba(5, 78, 103, 0.7);
+  display: none;
+}
+
+body section .font {
+  padding-top: 30%;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+body section .container {
+  margin: -7% 20%;
+  display: none;
+}
+
+@media (max-width: 1430px) {
+  body section .container {
+    display: block;
+  }
+}
+
+@media (max-width: 1320px) {
+  body section .container {
+    margin: -8% 18%;
+  }
+}
+
+@media (max-width: 1230px) {
+  body section .container {
+    margin: -7% 17%;
+  }
+}
+
+@media (max-width: 1100px) {
+  body section .container {
+    margin: -7% 17%;
+  }
+}
+
+@media (max-width: 1000px) {
+  body section .container {
+    margin: -7% 20%;
+  }
+}
+
+@media (max-width: 950px) {
+  body section .container {
+    margin: -2%;
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  body section .container {
+    margin: -2%;
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  body section .container {
+    margin: -2%;
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 760px) {
+  body section .container {
+    margin-left: 16%;
+  }
+}
+
+@media (max-width: 680px) {
+  body section .container {
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 650px) {
+  body section .container {
+    margin-left: 16%;
+  }
+}
+
+@media (max-width: 630px) {
+  body section .container {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 610px) {
+  body section .container {
+    margin-left: 14%;
+  }
+}
+
+@media (max-width: 610px) {
+  body section .container {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 530px) {
+  body section .container {
+    margin-left: 13%;
+  }
+}
+
+@media (max-width: 490px) {
+  body section .container {
+    margin-left: 8%;
+  }
+}
+
+@media (max-width: 450px) {
+  body section .container {
+    margin-left: 6%;
+  }
+}
+
+@media (max-width: 420px) {
+  body section .container {
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 400px) {
+  body section .container {
+    margin-left: 1%;
+  }
+}
+
+@media (max-width: 390px) {
+  body section .container {
+    margin-left: -2%;
+  }
+}
+
+body section .container .bigBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 750px) {
+  body section .container .bigBox {
+    width: 380px;
+  }
+}
+
+body section .container .effects {
+  width: 220px;
+  height: 220px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1190px) {
+  body section .container .effects {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body section .container .effects {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body section .container .effects {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 950px) {
+  body section .container .effects {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 800px) {
+  body section .container .effects {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 700px) {
+  body section .container .effects {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+@media (max-width: 610px) {
+  body section .container .effects {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+body section .container .effects:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  body section .container .effects:hover {
+    z-index: 0;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+body section .container .square {
+  width: 220px;
+  height: 220px;
+  background: rgba(5, 78, 103, 0.7);
+  display: none;
+}
+
+@media (max-width: 1190px) {
+  body section .container .square {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body section .container .square {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body section .container .square {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 950px) {
+  body section .container .square {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 800px) {
+  body section .container .square {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 700px) {
+  body section .container .square {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 610px) {
+  body section .container .square {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+body section .container .fonts {
+  padding-top: 1px;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+@media (max-width: 1190px) {
+  body section .container .fonts {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body section .container .fonts {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body section .container .fonts {
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 950px) {
+  body section .container .fonts {
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 610px) {
+  body section .container .fonts {
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+}
+
+body section .container .fonts p {
+  margin-top: 36%;
+}
+
+body section .container .fonts .break {
+  margin-top: 30%;
+}
+
+body section .sport1 {
+  background-image: url(../img/watersport/sport1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport2 {
+  background-image: url(../img/watersport/sport2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport3 {
+  background-image: url(../img/watersport/sport3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport4 {
+  background-image: url(../img/watersport/sport4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport5 {
+  background-image: url(../img/watersport/sport5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport6 {
+  background-image: url(../img/watersport/sport6.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport7 {
+  background-image: url(../img/watersport/sport7.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport8 {
+  background-image: url(../img/watersport/sport8.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport9 {
+  background-image: url(../img/watersport/sport9.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body section .sport10 {
+  background-image: url(../img/watersport/sport10.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=water_sport.css.map */

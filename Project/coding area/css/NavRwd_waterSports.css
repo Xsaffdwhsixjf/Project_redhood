@@ -1,0 +1,550 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.show {
+  display: block;
+}
+
+nav {
+  height: 128px;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+nav .container #navLogo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 105px;
+  opacity: 0.7;
+  margin: 0 30px;
+}
+
+nav .container .nav .menu-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+}
+
+nav .container .nav .menu-wrap .toggler {
+  position: fixed;
+  top: 20px;
+  right: 4%;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  /* Toggler Animation */
+  /* Turns Lines Into X */
+  /* Rotate On Hover When Checked */
+  /* Show Menu */
+}
+
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div:before,
+nav .container .nav .menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+nav .container .nav .menu-wrap .toggler:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+nav .container .nav .menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+nav .container .nav .menu-wrap .toggler:checked ~ .menu > .inner-layer {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+
+nav .container .nav .menu-wrap .toggler:checked ~ .menu > .through-layer {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+nav .container .nav .menu-wrap .hamburger {
+  position: fixed;
+  top: 30px;
+  left: 85%;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  visibility: hidden;
+  /* 變版開關 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1180px) {
+  nav .container .nav .menu-wrap .hamburger {
+    left: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  nav .container .nav .menu-wrap .hamburger {
+    left: 88%;
+  }
+}
+
+@media (max-width: 550px) {
+  nav .container .nav .menu-wrap .hamburger {
+    left: 86%;
+  }
+}
+
+@media (max-width: 450px) {
+  nav .container .nav .menu-wrap .hamburger {
+    left: 85%;
+  }
+}
+
+nav .container .nav .menu-wrap .hamburger .hambar {
+  /* Hamburger Line */
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .container .nav .menu-wrap .hamburger .hambar::before, nav .container .nav .menu-wrap .hamburger .hambar::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  /* Hamburger Lines - Top & Bottom */
+}
+
+nav .container .nav .menu-wrap .hamburger .hambar::after {
+  top: 10px;
+  /* Moves Line Down */
+}
+
+nav .container .nav .menu-wrap .menu {
+  width: 100vw;
+  height: 100%;
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .container .nav .menu-wrap .menu .inner-layer {
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 變化出現菜單效果 */
+}
+
+nav .container .nav .menu-wrap .menu .inner-layer .through-layer {
+  text-align: center;
+  opacity: 1;
+  /* 一開始先透明 */
+}
+
+nav .container .nav .menu-wrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px;
+  position: relative;
+}
+
+nav .container .nav .menu-wrap ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  opacity: 0.9;
+  font-size: 30px;
+}
+
+nav .container .nav .menu-wrap ul li a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
+nav .container .nav .menu-wrap ul .dropdown {
+  float: left;
+  font-size: 30px;
+  color: #fff;
+}
+
+nav .container .nav .menu-wrap ul .dropdown .dropbtn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav .container .nav .menu-wrap ul .dropdown .dropbtn:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+          mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+  -webkit-mask-size: 200%;
+          mask-size: 200%;
+  -webkit-animation: shine 2s infinite;
+          animation: shine 2s infinite;
+  -webkit-text-decoration: line-through double #78b2c4 .5px;
+          text-decoration: line-through double #78b2c4 .5px;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+nav .container .nav .menu-wrap ul .dropdown-content {
+  display: none;
+  min-width: 160px;
+}
+
+nav .container .nav .menu-wrap ul .dropdown-content.list1 {
+  position: absolute;
+  top: 90%;
+  right: 15%;
+  padding: 5px;
+}
+
+nav .container .nav .menu-wrap ul .dropdown-content.list2 {
+  position: absolute;
+  top: 90%;
+  left: 84%;
+  padding: 5px;
+}
+
+nav .container .nav .menu-wrap ul .dropdown-content.show {
+  display: block;
+}
+
+nav .container a {
+  letter-spacing: .5px;
+}
+
+nav .container a:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+          mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+  -webkit-mask-size: 200%;
+          mask-size: 200%;
+  -webkit-animation: shine 2s infinite;
+          animation: shine 2s infinite;
+  -webkit-text-decoration: line-through double #78b2c4 .5px;
+          text-decoration: line-through double #78b2c4 .5px;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+nav .container .theme {
+  font-size: 1rem;
+  color: grey;
+  text-align: center;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+#subject {
+  font-size: 28px;
+  position: absolute;
+  top: 85px;
+  left: 80px;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+@media (max-width: 530px) {
+  #subject {
+    left: 7%;
+  }
+}
+
+#subject span {
+  color: #566262;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: larger;
+          animation-name: larger;
+}
+
+#subject span:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+#subject:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+#subject:nth-child(2) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#subject:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#subject:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes larger {
+  0% {
+    font-weight: 100;
+  }
+  15% {
+    font-weight: 150;
+  }
+  30% {
+    font-weight: 200;
+  }
+  45% {
+    font-weight: 250;
+  }
+  60% {
+    font-weight: 300;
+  }
+  75% {
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 500;
+    color: #10c3fa;
+  }
+}
+
+@keyframes larger {
+  0% {
+    font-weight: 100;
+  }
+  15% {
+    font-weight: 150;
+  }
+  30% {
+    font-weight: 200;
+  }
+  45% {
+    font-weight: 250;
+  }
+  60% {
+    font-weight: 300;
+  }
+  75% {
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 500;
+    color: #10c3fa;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  nav .container {
+    padding: 0;
+  }
+  nav .container #navLogo {
+    top: 40px;
+    left: 5%;
+    width: 100px;
+  }
+  nav .container .nav .menu-wrap {
+    padding: 0;
+  }
+  nav .container .nav .menu-wrap .hamburger {
+    visibility: visible;
+  }
+  nav .container .nav .menu-wrap .menu {
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    height: 100vh;
+    background-color: #62939e;
+    opacity: 0.95;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer {
+    border-radius: 50%;
+    width: 200vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    /* 變化出現菜單效果 */
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer {
+    width: 100%;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5px;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li a {
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 5px;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li .dropbtn {
+    color: whitesmoke;
+    padding: 0px 5px;
+    font-size: 18px;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li .dropdown-content.list1, nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li .dropdown-content.list2 {
+    position: unset;
+    padding: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li .dropdown-content.list1 a, nav .container .nav .menu-wrap .menu .inner-layer .through-layer ul li .dropdown-content.list2 a {
+    font-size: 14px;
+    margin: 5px;
+    letter-spacing: 3px;
+  }
+  #subject {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+}
+/*# sourceMappingURL=NavRwd.css.map */
