@@ -312,7 +312,7 @@ nav .container .theme {
   top: 85px;
   left: 80px;
   letter-spacing: 5px;
-  z-index: 3;
+  z-index: 1;
 }
 
 #subject span {
