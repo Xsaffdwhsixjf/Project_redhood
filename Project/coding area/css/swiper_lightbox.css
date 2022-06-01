@@ -1,6 +1,8 @@
 .cb-image-grid {
   color: white;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: 20%;
+  margin-bottom: 5%;
 }
 
 @media (min-width: 786px) {
@@ -15,6 +17,28 @@
     -webkit-column-gap: 0;
             column-gap: 0;
     height: 50vh;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 786px) {
+  .cb-image-grid {
+    height: 41vh;
+  }
+}
+
+@media (max-width: 586px) {
+  .cb-image-grid {
+    height: 36vh;
+    padding: 0 15px 0 15px;
+    margin-top: 23%;
+  }
+}
+
+@media (max-width: 510px) {
+  .cb-image-grid {
+    height: 33vh;
+    margin-top: 23%;
   }
 }
 
@@ -22,7 +46,7 @@
   .cb-image-grid {
     padding: 0;
     height: 28vh;
-    margin-bottom: 15px;
+    margin-top: 30%;
   }
 }
 

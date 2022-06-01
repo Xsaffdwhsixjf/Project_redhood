@@ -2,20 +2,26 @@ body {
     background-image: url('../img/attraction/background.jpg');
 }
 
-section {
+.lightbox_with_grid {
     height: 89vh;
     display: flex;
     padding: 5%;
     column-gap: 50px;
     justify-content: space-around;
+    margin-top: 5%;
 
     @media (max-width:1250px) {
-        height: 89vh;
         align-items: center;
+        margin-top: 7%;
     }
 
     @media (max-width:880px) {
+        margin-top: 9%;
         height: 80vh;
+    }
+
+    @media (max-width:786px) {
+        display: none;
     }
 
     .map {
@@ -33,12 +39,6 @@ section {
         }
 
 
-    }
-}
-
-.lightbox_with_grid {
-    @media (max-width:755px) {
-        display: none;
     }
 }
 

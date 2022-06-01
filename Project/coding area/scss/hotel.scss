@@ -1,6 +1,7 @@
 .dataTables_wrapper {
     label {
         color: rgba(255, 255, 255, 0.7);
+
         @media (max-width:1250px) {
             margin-right: 25px;
         }
@@ -64,18 +65,26 @@ body {
         padding: 0;
         margin-top: 10%;
     }
+
+    @media (max-width:786px) {
+        margin-top: 19%;
+    }
+
     @media (max-width:657px) {
-        padding: 0;
-        margin-top: 16%;
+        margin-top: 26%;
+    }
+
+    @media (max-width:510px) {
+        margin-top: 30%;
     }
 
     @media (max-width:480px) {
         width: calc(100vw - 17px);
-        ;
+        margin-top: 50%;
     }
 
     h1 {
-        font-size: 1em;
+        font-size: 1.3em;
         float: left;
     }
 
@@ -83,6 +92,10 @@ body {
         #table_id {
             border-spacing: 20px 10px;
             height: 80%;
+
+            @media (max-width:667px) {
+                border-spacing: 0px 10px;
+            }
 
             thead {
                 display: none;
@@ -129,6 +142,7 @@ body {
 
                         @media (max-width:960px) {
                             width: 85%;
+                            height: calc(64vh / 3);
                         }
 
                         @media (max-width:786px) {
@@ -136,8 +150,10 @@ body {
                         }
 
                         @media (max-width:657px) {
-                            width: 100%;
+                            width: calc(100% - 38px);
+                            height: calc(50vh / 3);
                         }
+
 
                         .info_card {
                             height: 20vh;
@@ -154,7 +170,10 @@ body {
 
                                 @media (max-width:786px) {
                                     width: 44%;
+                                }
 
+                                @media (max-width:440px) {
+                                    width: 70%;
                                 }
 
                                 img {
@@ -167,20 +186,24 @@ body {
                             .content {
                                 width: 60%;
                                 height: 100%;
-                                margin-left: 30px;
+                                margin-left: 4%;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
                                 row-gap: 7px;
                                 position: relative;
+                                font-size: 19px;
 
-                                @media (max-width:657px) {
-                                    font-size: 19px;
+                                
+
+                                @media (max-width:550px) {
+                                    font-size: 17px;
                                 }
-
-                                @media (max-width:480px) {
+                                @media (max-width:450px) {
                                     font-size: 15px;
-                                    margin: 0;
+                                }
+                                @media (max-width:375px) {
+                                    font-size: 14px;
                                 }
 
                                 a {
@@ -216,6 +239,7 @@ body {
 
     img {
         height: 100px;
+
         @media (max-width:480px) {
             height: 70px;
         }
@@ -224,4 +248,24 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+nav {
+    .container {
+        .nav {
+            .menu-wrap .menu {
+                margin-right: 7%;
+            }
+
+            .menu-wrap {
+                ul {
+                    .dropdown-content.list2 {
+                        left: 0;
+                        transform: translateX(-7%);
+                    }
+                }
+            }
+
+        }
+    }
 }

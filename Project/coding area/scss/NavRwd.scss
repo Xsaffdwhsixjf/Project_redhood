@@ -22,7 +22,6 @@ a {
 }
 
 nav {
-
     .container {
         display: flex;
         justify-content: space-between;
@@ -49,14 +48,13 @@ nav {
                 // checkbox
                 .toggler {
                     position: fixed;
-                    top: 20px;
-                    right: 9%;
+                    top: 30px;
+                    left: 81%;
                     z-index: 2;
                     cursor: pointer;
                     width: 50px;
                     height: 50px;
                     opacity: 0;
-
                     /* Toggler Animation */
                     &:checked+.hamburger>div {
                         transform: rotate(135deg);
