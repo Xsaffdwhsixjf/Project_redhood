@@ -20,8 +20,8 @@ p {
   height: 100%;
   background-image: url("../img/index/animation_background.jpg");
   background-size: cover;
-  -webkit-animation: loading_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
-          animation: loading_animation 2s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
+  -webkit-animation: loading_animation 3s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
+          animation: loading_animation 3s cubic-bezier(0.68, 0.29, 0, 1.69) 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 1.5s;
@@ -227,7 +227,10 @@ p {
 
 @media (max-width: 1250px) {
   .loader .index_menu1 {
-    background-image: url("../img/index/4cards/515x150/transportation515x150.png");
+    background-image: url("../img/index/4cards/yachttablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
     top: 0%;
     left: 0%;
@@ -236,7 +239,7 @@ p {
 
 @media (max-width: 786px) {
   .loader .index_menu1 {
-    background-image: url("../img/index/4cards/260x100/transportation260x100.png");
+    background-image: url("../img/index/4cards/yachttablet.png");
   }
 }
 
