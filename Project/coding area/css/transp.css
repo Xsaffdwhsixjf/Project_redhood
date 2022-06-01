@@ -6,13 +6,13 @@ body {
   margin-top: 200px;
 }
 
-section {
+.header {
   height: 80px;
   margin: 20px 5%;
   border: 2px;
 }
 
-section .titleBox {
+.header .titleBox {
   width: calc(100vw - 5%);
   background: -webkit-gradient(linear, left top, right top, color-stop(11%, #77a5b0), color-stop(53%, #d8eef4), to(rgba(191, 244, 255, 0)));
   background: linear-gradient(90deg, #77a5b0 11%, #d8eef4 53%, rgba(191, 244, 255, 0) 100%);

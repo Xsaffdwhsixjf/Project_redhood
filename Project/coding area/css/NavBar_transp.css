@@ -30,18 +30,15 @@ nav .container {
           justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
   margin: 0 auto;
   z-index: 3;
-  background-color: #82aeb8;
-  opacity: 0.8;
 }
 
 nav .container #navLogo {
   position: absolute;
   top: 40px;
   left: 40px;
-  width: 150px;
+  width: 105px;
   opacity: 0.7;
   margin: 0 30px;
 }
@@ -54,9 +51,9 @@ nav .container .nav .menu-wrap {
 }
 
 nav .container .nav .menu-wrap .toggler {
-  position: absolute;
-  top: 3%;
-  right: 5%;
+  position: fixed;
+  top: 20px;
+  right: 9%;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -103,9 +100,9 @@ nav .container .nav .menu-wrap .toggler:checked ~ .menu > .through-layer {
 }
 
 nav .container .nav .menu-wrap .hamburger {
-  position: absolute;
-  top: 4%;
-  right: 5%;
+  position: fixed;
+  top: 30px;
+  left: 81%;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -206,22 +203,32 @@ nav .container .nav .menu-wrap ul li {
   font-size: 30px;
 }
 
+nav .container .nav .menu-wrap ul li a {
+  color: grey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
 nav .container .nav .menu-wrap ul .dropdown {
   float: left;
   font-size: 30px;
 }
 
 nav .container .nav .menu-wrap ul .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.9;
   border: none;
   outline: none;
-  color: black;
+  color: grey;
   background-color: transparent;
   font-family: inherit;
   margin: 0;
 }
 
-nav .container .nav .menu-wrap ul .dropdown:hover {
+nav .container .nav .menu-wrap ul .dropdown .dropbtn:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
           mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
   -webkit-mask-size: 200%;
@@ -234,68 +241,34 @@ nav .container .nav .menu-wrap ul .dropdown:hover {
           animation-play-state: paused;
 }
 
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content {
+nav .container .nav .menu-wrap ul .dropdown-content {
   display: none;
   min-width: 160px;
 }
 
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list1 {
-  -webkit-animation: none;
-          animation: none;
+nav .container .nav .menu-wrap ul .dropdown-content.list1 {
   position: absolute;
   top: 90%;
   right: 15%;
-}
-
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list1 a {
-  font-size: 16px;
   padding: 5px;
 }
 
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list1 a:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 {
+nav .container .nav .menu-wrap ul .dropdown-content.list2 {
   position: absolute;
   top: 90%;
-  left: 79%;
-}
-
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 a {
-  font-size: 16px;
+  left: 84%;
   padding: 5px;
 }
 
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.list2 a:hover {
-  -webkit-mask-image: unset;
-          mask-image: unset;
-  -webkit-mask-size: unset;
-          mask-size: unset;
-  -webkit-animation: unset;
-          animation: unset;
-  text-decoration: unset;
-}
-
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
-}
-
-nav .container .nav .menu-wrap ul .dropdown .dropdown-content.show {
+nav .container .nav .menu-wrap ul .dropdown-content.show {
   display: block;
 }
 
-nav .container .nav .menu-wrap a {
+nav .container a {
   letter-spacing: .5px;
 }
 
-nav .container .nav .menu-wrap a:hover {
+nav .container a:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
           mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
   -webkit-mask-size: 200%;
@@ -324,9 +297,9 @@ nav .container .nav .menu-wrap a:hover {
   }
 }
 
-nav .container .nav .menu-wrap .theme {
+nav .container .theme {
   font-size: 1rem;
-  color: black;
+  color: grey;
   text-align: center;
   opacity: 0.9;
   letter-spacing: 2px;
@@ -334,17 +307,16 @@ nav .container .nav .menu-wrap .theme {
 }
 
 #subject {
-  font-size: 36px;
+  font-size: 28px;
   position: absolute;
-  top: 104px;
-  left: 82px;
-  letter-spacing: 3px;
-  font-weight: 100;
+  top: 110px;
+  left: 80px;
+  letter-spacing: 5px;
   z-index: 3;
 }
 
 #subject span {
-  color: lightsteelblue;
+  color: #566262;
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
   -webkit-animation-iteration-count: infinite;
@@ -404,7 +376,7 @@ nav .container .nav .menu-wrap .theme {
   }
   100% {
     font-weight: 500;
-    color: #69B1C2;
+    color: #10c3fa;
   }
 }
 
@@ -429,7 +401,7 @@ nav .container .nav .menu-wrap .theme {
   }
   100% {
     font-weight: 500;
-    color: #69B1C2;
+    color: #10c3fa;
   }
 }
 
@@ -438,7 +410,7 @@ nav .container .nav .menu-wrap .theme {
     padding: 0;
   }
   nav .container #navLogo {
-    top: 5%;
+    top: 40px;
     left: 5%;
     width: 100px;
   }
@@ -450,10 +422,14 @@ nav .container .nav .menu-wrap .theme {
   }
   nav .container .nav .menu-wrap .menu {
     margin: 0;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
     visibility: hidden;
     height: 100vh;
     background-color: #62939e;
-    opacity: 0.8;
+    opacity: 0.95;
   }
   nav .container .nav .menu-wrap .menu .inner-layer {
     border-radius: 50%;
