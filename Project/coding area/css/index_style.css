@@ -52,8 +52,8 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 25px;
-    width: 43%;
-    height: 97vh;
+    width: 50%;
+    height: 80vh;
     top: 50%;
     left: 50%;
   }
@@ -62,14 +62,14 @@ p {
 @media (max-width: 786px) {
   .loader .menu {
     width: 69%;
-    height: 80vh;
+    height: 60vh;
   }
 }
 
 @media (max-width: 540px) {
   .loader .menu {
-    width: 69%;
-    height: 70vh;
+    width: 85%;
+    height: 50vh;
   }
 }
 
@@ -170,6 +170,15 @@ p {
   left: 7%;
 }
 
+@media (max-width: 786px) {
+  .loader .menu .menu_title1 p:nth-child(1),
+  .loader .menu .menu_title2 p:nth-child(1),
+  .loader .menu .menu_title3 p:nth-child(1),
+  .loader .menu .menu_title4 p:nth-child(1) {
+    top: 46%;
+  }
+}
+
 .loader .menu .menu_title1 p:nth-child(2),
 .loader .menu .menu_title2 p:nth-child(2),
 .loader .menu .menu_title3 p:nth-child(2),
@@ -177,6 +186,15 @@ p {
   position: absolute;
   top: 78%;
   left: 7%;
+}
+
+@media (max-width: 786px) {
+  .loader .menu .menu_title1 p:nth-child(2),
+  .loader .menu .menu_title2 p:nth-child(2),
+  .loader .menu .menu_title3 p:nth-child(2),
+  .loader .menu .menu_title4 p:nth-child(2) {
+    top: 70%;
+  }
 }
 
 @media (max-width: 1250px) {

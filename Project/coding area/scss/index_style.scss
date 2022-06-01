@@ -37,20 +37,20 @@ p {
             transform: translate(-50%, -50%);
             flex-direction: column;
             row-gap: 25px;
-            width: 43%;
-            height: 97vh;
+            width: 50%;
+            height: 80vh;
             top: 50%;
             left: 50%;
         }
 
         @media (max-width:786px) {
             width: 69%;
-            height: 80vh;
+            height: 60vh;
         }
 
         @media (max-width:540px) {
-            width: 69%;
-            height: 70vh;
+            width: 85%;
+            height: 50vh;
         }
 
         .index_menu1,
@@ -115,11 +115,17 @@ p {
                 position: absolute;
                 top: 63%;
                 left: 7%;
+                @media (max-width:786px) {
+                    top: 46%;
+                }
             }
             p:nth-child(2) {
                 position: absolute;
                 top: 78%;
                 left: 7%;
+                @media (max-width:786px) {
+                    top: 70%;
+                }
             }
 
                 @media (max-width:1250px) {
