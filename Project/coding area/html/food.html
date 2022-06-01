@@ -13,21 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <!-- navbar CSS -->
-    <link rel="stylesheet" href="../css/NavRwd-food.css">
-    <!-- 滑鼠特效CSS -->
-    <link rel="stylesheet" href="../css/mouse.css">
-    <!-- title icon -->
+    <!-- Favicon -->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-
-    <title>特色小食Taiwan Snack</title>
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="../css/NewRwd_food.css">
+    <!-- News CSS -->
+    <link rel="stylesheet" href="../Navbar - Warning-/css/news.css">
+    
+    <title>特色小食 Taiwan Snack</title>
 </head>
 
 <body>
     <nav>
         <div class="container">
             <!-- Logo -->
-            <a href="./index.html" class="logo">
+            <a href="#" class="logo">
                 <img id="navLogo" src="../img/nav/Logo.png" alt="小琉球Logo">
             </a>
 
@@ -42,8 +42,8 @@
                         <div class="inner-layer">
                             <div class="through-layer">
                                 <ul>
-                                    <li>
-                                        <a href="./news.html" target=_blank class="theme">最新消息 <br>Latest News</a>
+                                    <li class="theme">
+                                        <a href="#" class="theme news">最新消息 <br>Latest News</a>
                                     </li>
                                     <li>
                                         <a href="./tranp.html" class="theme">水陸交通 <br> Transportation</a>
@@ -64,6 +64,7 @@
                                                 Feature store
                                             </a>
                                     </li>
+
                                     <li class="dropdown">
                                         <button class="dropbtn btn2 ">海闊天空<br>
                                             Attraction
@@ -85,21 +86,39 @@
                 </div>
             </div>
         </div>
+        <!-- 最新消息區塊 -->
+        <section id="news" class="">
+            <!-- 開啟/關閉icon -->
+            <div class="icon">
+                <img src="../Navbar - Warning-/img/nav/turtle.png" alt="" class="turtle d-none">
+                <img src="../Navbar - Warning-/img/nav/whale.png" alt="" class="whale">
+            </div>
+            <div class="content">
+                <h1>最新消息News</h1>
+                <div class="news_card">
+                    <img src="../img/wave.jpg" alt="">
+                    <h4>2022/01/26</h4>
+                    <h3>屏東縣琉球鄉 潮汐時刻查詢</h3>
+                    <p><a href="http://www.cwb.gov.tw/V7/forecast/fishery/tide_1.htm">潮汐時刻查詢連結</a><br>
+                        1. 進入網頁後，請點選左側地圖「高雄枋寮沿海」，找到「屏東縣 琉球」，即可知曉當天潮汐時刻。<br>
+                        2.欲知未來30天潮汐時刻，請點選「屏東縣 琉球」下方「未來30天」，即可知曉後續30天潮汐時刻。
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </section>
     </nav>
 
     <!-- 單元標題 -->
     <div id="subject">
-        <span class="text__animated" data-text="word w1">特</span>
-        <span class="text__animated" data-text="word w2">色</span>
-        <span class="text__animated" data-text="word w3">小</span>
-        <span class="text__animated" data-text="word w4">店</span>
-        <span class="text__animated" data-text="word w5">Taiwan</span>
-        <span class="text__animated" data-text="word w6">Snack</span>
+        <span class="text__animated" data-text="word w1">吃</span>
+        <span class="text__animated" data-text="word w2">飽</span>
+        <span class="text__animated" data-text="word w3">喝</span>
+        <span class="text__animated" data-text="word w4">足</span>
+        <span class="text__animated" data-text="word w5">Water</span>
+        <span class="text__animated" data-text="word w6">Sports</span>
 
     </div>
-
-
-
 
     <!-- Circle -->
     <section>
@@ -266,7 +285,7 @@
         </div>
     </section>
 
-    <!-- Food Introduction -->
+<!-- Food Introduction -->
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
@@ -286,30 +305,12 @@
             </div>
         </div>
     </div>
-    <!-- 滑鼠特效/頭 -->
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
 
-    <script src="../js/mouse.js"></script>
-    <!-- 滑鼠特效/尾 -->
 
-    <!-- Food Introduction's JS -->
+<!-- Navbar'JS -->
+<script src="../js/navbar.js"></script>
+<!-- Food Introduction's JS -->
     <script src="../js/food.js"></script>
-    
-    <!-- dropdown JS -->
-    <script>
-        const btn1 = document.querySelector('.btn1')
-        const btn2 = document.querySelector('.btn2')
-        const list1 = document.querySelector('.list1')
-        const list2 = document.querySelector('.list2')
-        btn1.addEventListener('click', () => {
-            list1.classList.toggle('show')
-        })
-        btn2.addEventListener('click', () => {
-            list2.classList.toggle('show')
-        })
-    </script>
-
 </body>
 
 </html>
