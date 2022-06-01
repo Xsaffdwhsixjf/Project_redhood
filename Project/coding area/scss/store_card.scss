@@ -206,6 +206,59 @@ a {
     }
 }
 
+
+// Logo, Navbar
+header {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: calc(1600px + 10%);
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 5%;
+
+        #navLogo {
+            position: absolute;
+            top: 40px;
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        .nav {
+            ul {
+                display: flex;
+
+                li {
+                    display: flex;
+                    margin: 15px;
+
+                    .icon {
+                        margin: 10px;
+                        opacity: 0.9;
+
+                        i {
+                            font-size: 18px;
+                            color: #FFF;
+                        }
+                    }
+
+                    .theme {
+                        font-size: 12px;
+                        text-align: center;
+                        letter-spacing: .5px;
+                        color: #FFF;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 // Cards
 section {
     position: relative;
@@ -435,22 +488,22 @@ section {
         .swiper-button-next,
         .swiper-button-prev:root {
             --swiper-navigation-size: 120px;
+            z-index: 0;
 
             @media (min-width: 300px) and (max-width: 825px) {
                 top: 115%;
                 right: 40%;
-                z-index: 0;
             }
         }
 
         .swiper-button-prev,
         .swiper-button-next:root {
             --swiper-navigation-size: 120px;
+            z-index: 0;
 
             @media (min-width: 300px) and (max-width: 825px) {
                 top: 115%;
                 left: 40%;
-                z-index: 0;
             }
         }
 

@@ -9,7 +9,7 @@
 }
 
 body {
-    // height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-image: url(../img/food/food_bg_1920x1080.png);
@@ -28,14 +28,64 @@ a {
     text-decoration: none;
 }
 
+
+// Logo
+// Navbar
+header {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: calc(1600px + 10%);
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 5%;
+
+        #navLogo {
+            position: absolute;
+            top: 40px;
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        .nav {
+            ul {
+                display: flex;
+
+                li {
+                    display: flex;
+                    margin: 15px;
+
+                    .icon {
+                        margin: 10px;
+                        opacity: 0.9;
+
+                        i {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .theme {
+                        font-size: 12px;
+                        text-align: center;
+                        letter-spacing: .5px;
+                        color: #02171C;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Circle's inner style
 section {
     position: relative;
     max-width: calc(1600px + 10%);
     width: 100%;
     height: calc(100vh - 200px);
-    margin: 100px auto;
-    // 設定100px不然section往上跑
+    margin: 0 auto;
     padding: 0 5%;
 
     .food1 {
@@ -598,10 +648,6 @@ section {
     }
 }
 
-
-
-
-
 //Circle's size
 .twoHundred {
     position: relative;
@@ -1063,7 +1109,7 @@ section {
     height: 0%;
     width: 100%;
     position: fixed;
-    z-index: 3;
+    z-index: 16;
     top: 0;
     left: 0;
     background-color: rgba(5, 78, 103, .8);
