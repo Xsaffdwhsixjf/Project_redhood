@@ -15,21 +15,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <!-- 滑鼠特效CSS -->
-    <link rel="stylesheet" href="../css/mouse.css">
-    <!-- navbar css -->
-    <link rel="stylesheet" href="../css/NavRwd.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="../css/NewRwd_storeCards.css">
 
-    <title>特色小店 Feature Store</title>
+    <title>特色小店</title>
 </head>
 
 <body>
+    <!-- Bubble Ｅffects -->
+    <ul class="bubble">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
     <nav>
         <div class="container">
             <!-- Logo -->
-            <a href="./index.html" class="logo">
+            <a href="#" class="logo">
                 <img id="navLogo" src="../img/nav/Logo.png" alt="小琉球Logo">
             </a>
 
@@ -44,8 +62,8 @@
                         <div class="inner-layer">
                             <div class="through-layer">
                                 <ul>
-                                    <li>
-                                        <a href="./news.html" target=_blank class="theme">最新消息 <br>Latest News</a>
+                                    <li class="theme">
+                                        <a href="#" class="theme news">最新消息 <br>Latest News</a>
                                     </li>
                                     <li>
                                         <a href="./tranp.html" class="theme">水陸交通 <br> Transportation</a>
@@ -88,6 +106,27 @@
                 </div>
             </div>
         </div>
+         <!-- 最新消息區塊 -->
+         <section id="news" class="">
+            <!-- 開啟/關閉icon -->
+            <div class="icon">
+                <img src="../img/turtle.png" alt="" class="turtle d-none">
+                <img src="../img/whale.png" alt="" class="whale">
+            </div>
+            <div class="content">
+                <h1>最新消息News</h1>
+                <div class="news_card">
+                    <img src="../img/wave.jpg" alt="">
+                    <h4>2022/01/26</h4>
+                    <h3>屏東縣琉球鄉 潮汐時刻查詢</h3>
+                    <p><a href="http://www.cwb.gov.tw/V7/forecast/fishery/tide_1.htm">潮汐時刻查詢連結</a><br>
+                        1. 進入網頁後，請點選左側地圖「高雄枋寮沿海」，找到「屏東縣 琉球」，即可知曉當天潮汐時刻。<br>
+                        2.欲知未來30天潮汐時刻，請點選「屏東縣 琉球」下方「未來30天」，即可知曉後續30天潮汐時刻。
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </section>
     </nav>
 
     <!-- 單元標題 -->
@@ -96,45 +135,11 @@
         <span class="text__animated" data-text="word w2">色</span>
         <span class="text__animated" data-text="word w3">小</span>
         <span class="text__animated" data-text="word w4">店</span>
-        <span class="text__animated" data-text="word w5">Feature</span>
+        <span class="text__animated" data-text="word w5">Taiwan</span>
         <span class="text__animated" data-text="word w6">Store</span>
-
     </div>
 
-    <script>
-        // dropdown-js
-        const btn1 = document.querySelector('.btn1')
-        const btn2 = document.querySelector('.btn2')
-        const list1 = document.querySelector('.list1')
-        const list2 = document.querySelector('.list2')
-        btn1.addEventListener('click', () => {
-            list1.classList.toggle('show')
-        })
-        btn2.addEventListener('click', () => {
-            list2.classList.toggle('show')
-        })
-
-    </script>
-
-    <!-- Bubble Ｅffects -->
-    <ul class="bubble">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    
 
     <!-- Cards -->
     <section>
@@ -450,16 +455,11 @@
         </div>
     </section>
 
-    <!-- Swiper -->
+<!-- Navbar'JS -->
+<script src="../js/navbar.js"></script>
+<!-- Swiper -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/store_card.js"></script>
-
-    <!-- 滑鼠特效/頭 -->
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
-
-    <script src="../js/mouse.js"></script>
-    <!-- 滑鼠特效/尾 -->
 </body>
 
 </html>
