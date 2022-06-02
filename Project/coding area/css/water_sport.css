@@ -369,7 +369,7 @@ body section .container {
 
 @media (max-width: 800px) {
   body section .container {
-    margin: -2%;
+    margin: -5%;
     margin-left: 18%;
   }
 }
@@ -441,6 +441,18 @@ body section .container {
 }
 
 @media (max-width: 390px) {
+  body section .container {
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 385px) {
+  body section .container {
+    margin-left: -1%;
+  }
+}
+
+@media (max-width: 375px) {
   body section .container {
     margin-left: -2%;
   }

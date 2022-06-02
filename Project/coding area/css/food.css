@@ -604,7 +604,7 @@ section .food7 {
 
 section .food8 {
   position: absolute;
-  top: 78%;
+  top: 75%;
   left: 65%;
   background-image: url(../img/food/food8.jpg);
   background-position: center;
@@ -749,8 +749,8 @@ section .food9 {
 
 section .food10 {
   position: absolute;
-  top: 78%;
-  left: 40%;
+  top: 75%;
+  left: 42%;
   background-image: url(../img/food/food10.jpg);
   background-position: center;
   background-size: cover;
@@ -759,27 +759,26 @@ section .food10 {
 
 @media (max-width: 1670px) {
   section .food10 {
-    left: 38%;
+    left: 39%;
   }
 }
 
 @media (max-width: 1500px) {
   section .food10 {
-    top: 75%;
     left: 36%;
   }
 }
 
 @media (max-width: 1400px) {
   section .food10 {
-    top: 78%;
+    top: 75%;
     left: 40%;
   }
 }
 
 @media (max-width: 1150px) {
   section .food10 {
-    top: 82%;
+    top: 80%;
   }
 }
 
