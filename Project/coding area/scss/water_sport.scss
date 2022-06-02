@@ -325,7 +325,7 @@ section {
         }
 
         @media (max-width: 800px) {
-            margin: -2%;
+            margin: -5%;
             margin-left: 18%;
         }
 
@@ -374,6 +374,14 @@ section {
         }
 
         @media (max-width: 390px) {
+            margin-left: 0%;
+        }
+
+        @media (max-width: 385px) {
+            margin-left: -1%;
+        }
+
+        @media (max-width: 375px) {
             margin-left: -2%;
         }
 
@@ -387,7 +395,6 @@ section {
             @media (max-width: 750px) {
                 width: 380px;
             }
-
         }
 
         .effects {

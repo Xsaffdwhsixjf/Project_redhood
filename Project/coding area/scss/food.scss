@@ -483,7 +483,7 @@ section {
     // size: 200px change
     .food8 {
         position: absolute;
-        top: 78%;
+        top: 75%;
         left: 65%;
         background-image: url(../img/food/food8.jpg);
         background-position: center;
@@ -593,29 +593,28 @@ section {
     // size: 200px change
     .food10 {
         position: absolute;
-        top: 78%;
-        left: 40%;
+        top: 75%;
+        left: 42%;
         background-image: url(../img/food/food10.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
 
         @media (max-width: 1670px) {
-            left: 38%;
+            left: 39%;
         }
 
         @media (max-width: 1500px) {
-            top: 75%;
             left: 36%;
         }
 
         @media (max-width: 1400px) {
-            top: 78%;
+            top: 75%;
             left: 40%;
         }
 
         @media (max-width: 1150px) {
-            top: 82%;
+            top: 80%;
         }
 
         @media (max-width: 1000px) {
