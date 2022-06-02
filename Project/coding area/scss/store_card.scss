@@ -47,6 +47,10 @@ a {
         animation: bubble-ani 1s ease-out infinite;
         border-radius: 100%;
 
+        @media (max-width: 400px) {
+            top: 60%;
+        }
+
     }
 
     /* glow of the bubbles*/
@@ -269,7 +273,7 @@ section {
     padding: 0 5%;
 
     @media (max-width: 825px) {
-        top: 13%;
+        top: 9%;
     }
 
     @media (max-width: 600px) {
